@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "photoniced": {
+      "commandName": "Project",
+      "commandLineArgs": "-p D:\\Dev\\photoniced\\test_assets\\"
+    }
+  }
+}
