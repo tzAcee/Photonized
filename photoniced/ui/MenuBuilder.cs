@@ -7,7 +7,7 @@ using photoniced.ui.repos;
 
 namespace photoniced.ui
 {
-    class MenuBuilder : IMenuBuilderRepository
+    class MenuBuilder : IMenuBuilder
     {
         public static string[] get_args()
         {

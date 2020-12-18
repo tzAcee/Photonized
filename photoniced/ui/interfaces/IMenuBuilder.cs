@@ -6,7 +6,7 @@ using photoniced.device;
 
 namespace photoniced.ui.repos
 {
-    public interface IMenuBuilderRepository
+    public interface IMenuBuilder
     {
         static List<MethodsHolder> get_methods(Device dev) => new List<MethodsHolder>() { };
 

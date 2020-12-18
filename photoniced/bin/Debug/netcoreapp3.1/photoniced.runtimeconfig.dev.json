@@ -1,9 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\FleeXo-PC\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\FleeXo-PC\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "/home/fleexo/.dotnet/store/|arch|/|tfm|",
+      "/home/fleexo/.nuget/packages"
     ]
   }
 }

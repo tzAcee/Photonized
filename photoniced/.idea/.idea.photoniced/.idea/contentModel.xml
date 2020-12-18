@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_photoniced.1086634153.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.0/build/_common/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.0/build/_common/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.0/build/netcoreapp1.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="UnitTest" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="common" t="Include">
+        <e p="Required.cs" t="Include" />
+      </e>
+      <e p="device" t="Include">
+        <e p="Device.cs" t="Include" />
+        <e p="DeviceChanger.cs" t="Include" />
+        <e p="DeviceReader.cs" t="Include" />
+        <e p="DeviceSorter.cs" t="Include" />
+        <e p="interfaces" t="Include">
+          <e p="IDeviceChanger.cs" t="Include" />
+          <e p="IDeviceReader.cs" t="Include" />
+          <e p="IDeviceSorter.cs" t="Include" />
+          <e p="services" t="Include">
+            <e p="IDevicePathService.cs" t="Include" />
+          </e>
+        </e>
+        <e p="services" t="Include">
+          <e p="DevicePathService.cs" t="Include" />
+        </e>
+      </e>
+      <e p="essentials" t="Include">
+        <e p="commandline_parser" t="Include">
+          <e p="CommandLineOptions.cs" t="Include" />
+          <e p="CommandLineParser.cs" t="Include" />
+          <e p="interfaces" t="Include">
+            <e p="ICommandLineParser.cs" t="Include" />
+          </e>
+        </e>
+        <e p="struct" t="Include">
+          <e p="DeviceUserEntry.cs" t="Include" />
+          <e p="MethodsHolder.cs" t="Include" />
+        </e>
+      </e>
+      <e p="factory" t="Include">
+        <e p="Factory.cs" t="Include" />
+        <e p="interface" t="Include">
+          <e p="IFactory.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="photoniced.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="photoniced.csproj" t="IncludeRecursive" />
+      <e p="photoniced.sln" t="IncludeFlat" />
+      <e p="test_assets" t="Include">
+        <e p="back" t="Include">
+          <e p="austin-chan-ukzHlkoz1IE-unsplash.jpg" t="Include" />
+          <e p="aziz-acharki-H90Af2TFqng-unsplash.jpg" t="Include" />
+          <e p="davisuko-5E5N49RWtbA-unsplash.jpg" t="Include" />
+          <e p="florian-klauer-mk7D-4UCfmg-unsplash.jpg" t="Include" />
+          <e p="jason-leung-Xaanw0s0pMk-unsplash.jpg" t="Include" />
+          <e p="katie-moum-iRMUDX0kyOc-unsplash.jpg" t="Include" />
+          <e p="kristopher-roller-PC_lbSSxCZE-unsplash.jpg" t="Include" />
+          <e p="sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" t="Include" />
+        </e>
+        <e p="real" t="Include">
+          <e p="austin-chan-ukzHlkoz1IE-unsplash.jpg" t="Include" />
+          <e p="aziz-acharki-H90Af2TFqng-unsplash.jpg" t="Include" />
+          <e p="davisuko-5E5N49RWtbA-unsplash.jpg" t="Include" />
+          <e p="florian-klauer-mk7D-4UCfmg-unsplash.jpg" t="Include" />
+          <e p="jason-leung-Xaanw0s0pMk-unsplash.jpg" t="Include" />
+          <e p="katie-moum-iRMUDX0kyOc-unsplash.jpg" t="Include" />
+          <e p="kristopher-roller-PC_lbSSxCZE-unsplash.jpg" t="Include" />
+          <e p="sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" t="Include" />
+        </e>
+      </e>
+      <e p="ui" t="Include">
+        <e p="Menu.cs" t="Include" />
+        <e p="MenuBuilder.cs" t="Include" />
+        <e p="MenuView.cs" t="Include" />
+        <e p="interfaces" t="Include">
+          <e p="IMenuBuilder.cs" t="Include" />
+          <e p="IMenuView.cs" t="Include" />
+        </e>
+      </e>
+    </e>
+    <e p="$PROJECT_DIR$/../photoniced_unittest" t="IncludeRecursive">
+      <e p="DeviceTest.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="photoniced_unittest.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="photoniced_unittest.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>

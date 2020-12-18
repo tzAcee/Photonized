@@ -1,45 +1,49 @@
-﻿using System;
-using System.IO;
-using photoniced.common;
+﻿using photoniced.common;
+using photoniced.device.interfaces;
 using photoniced.essentials;
-using photoniced.essentials.commandline_parser.repos;
+using photoniced.essentials.commandline_parser.interfaces;
+using photoniced.interfaces;
 
 namespace photoniced.device
 {
     public class Device
     {
-        public ICommandLineParserRepository CmdParser { get; }
-        public Device(ICommandLineParserRepository cmdLineParser)
+        public ICommandLineParser CmdParser { get; }
+
+        private IDeviceReader _reader;
+        private IDeviceSorter _sorter;
+        private IDeviceChanger _changer;
+
+        public Device(ICommandLineParser parser, IDeviceReader deviceReader, IDeviceSorter deviceSorter, IDeviceChanger deviceChanger)
+        {   
+            //TODO OWN Factory pls
+            CmdParser = Required.NotNull(parser, nameof(parser));
+            _reader = Required.NotNull(deviceReader, nameof(deviceReader));
+            _sorter = Required.NotNull(deviceSorter, nameof(deviceSorter));
+            _changer = Required.NotNull(deviceChanger, nameof(deviceChanger));
+            init_modules();
+        }
+
+        private void init_modules()
         {
-            this.CmdParser = Requerd.NotNull(cmdLineParser, nameof(cmdLineParser));
+            _reader.set_parser(CmdParser);
+            _sorter.set_parser(CmdParser);
+            _changer.set_parser(CmdParser);
         }
 
         public void read()
         {
-            Console.WriteLine("OMEGA");
+            _reader.read();
         }
 
         public void sort()
         {
-            var a = Console.ReadLine();
+            _sorter.sort();
         }
 
         public void change_device_path()
-        { // Need Later work, works for now
-            string path;
-            try
-            {
-                Console.Write("Paste your new path: ");
-                path = Console.ReadLine();
-                Path.GetDirectoryName(path);
-            }
-            catch(Exception e)
-            {
-                path = "./";
-            }
-
-            CmdParser.DirPath = path;
-            Console.Title = "Device mounted on " + Path.GetFullPath(path);
+        { 
+            _changer.change();
         }
     }
 }

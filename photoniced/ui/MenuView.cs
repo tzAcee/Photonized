@@ -7,7 +7,7 @@ using System.IO;
 
 namespace photoniced.ui
 {
-    public class MenuView : ConsoleMenu, IMenuViewRepository
+    public class MenuView : ConsoleMenu, IMenuView
     {
         private List<MethodsHolder> _methods;
         private string _path;

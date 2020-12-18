@@ -9,7 +9,7 @@ namespace photoniced.ui
 {
     public class Menu
     {
-        private IMenuViewRepository _menuView;
+        private IMenuView _menuView;
 
         public Menu(Device dev)
         {

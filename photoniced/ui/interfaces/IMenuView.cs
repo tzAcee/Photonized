@@ -4,7 +4,7 @@ using System.Text;
 
 namespace photoniced.repos
 {
-    public interface IMenuViewRepository 
+    public interface IMenuView
     {
         void configure();
         void build();

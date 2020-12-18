@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using photoniced.essentials.commandline_parser.repos;
+using photoniced.essentials.commandline_parser.interfaces;
 using photoniced.essentials.commandline_parser;
 using CommandLine;
 using System.IO;
 
 namespace photoniced.essentials
 {
-    public class CommandLineParser : ICommandLineParserRepository
+    public class CommandLineParser : ICommandLineParser
     {
         public string DirPath { get; set; }
         public CommandLineParser(string[] args)

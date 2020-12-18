@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\photonized\\photoniced\\photoniced.csproj": {}
+    "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\photonized\\photoniced\\photoniced.csproj": {
+    "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\photonized\\photoniced\\photoniced.csproj",
+        "projectUniqueName": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj",
         "projectName": "photoniced",
-        "projectPath": "D:\\Dev\\photonized\\photoniced\\photoniced.csproj",
-        "packagesPath": "C:\\Users\\FleeXo-PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\photonized\\photoniced\\obj\\",
+        "projectPath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj",
+        "packagesPath": "/home/fleexo/.nuget/packages/",
+        "outputPath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\FleeXo-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/fleexo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,12 +55,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,7 +2,7 @@
   "profiles": {
     "photoniced": {
       "commandName": "Project",
-      "commandLineArgs": "-p D:\\Dev\\photoniced\\test_assets\\"
+      "commandLineArgs": "-p /home/fleexo/_dev/programmentwurf/photonized/photoniced/test_assets/real" 
     }
   }
 }

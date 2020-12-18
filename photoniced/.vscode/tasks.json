@@ -3,9 +3,10 @@
     "tasks": [
         {
             "label": "build",
-            "command": "dotnet",
+            "command": "sudo",
             "type": "process",
             "args": [
+                "dotnet",
                 "build",
                 "${workspaceFolder}/photoniced.csproj",
                 "/property:GenerateFullPaths=true",
