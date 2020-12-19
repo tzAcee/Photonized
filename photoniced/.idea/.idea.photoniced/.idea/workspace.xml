@@ -5,56 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e62c42d9-efcb-4760-8159-59de2c204ad5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/device/interfaces/services/IDeviceNoteService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/device/services/DeviceNoteService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/essentials/path_tree/INodePrinter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/essentials/path_tree/Node.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/essentials/path_tree/NodePrinter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/.photon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/austin-chan-ukzHlkoz1IE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/aziz-acharki-H90Af2TFqng-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/davisuko-5E5N49RWtbA-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/florian-klauer-mk7D-4UCfmg-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/jason-leung-Xaanw0s0pMk-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/katie-moum-iRMUDX0kyOc-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/kristopher-roller-PC_lbSSxCZE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasdasd/sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/austin-chan-ukzHlkoz1IE-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/aziz-acharki-H90Af2TFqng-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/davisuko-5E5N49RWtbA-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/florian-klauer-mk7D-4UCfmg-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/jason-leung-Xaanw0s0pMk-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/katie-moum-iRMUDX0kyOc-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/kristopher-roller-PC_lbSSxCZE-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device/DeviceReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/DeviceReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device/DeviceSorter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/DeviceSorter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device/interfaces/IDeviceReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/interfaces/IDeviceReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device/interfaces/services/IDeviceNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/interfaces/services/IDeviceNoteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device/services/DeviceNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/services/DeviceNoteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/essentials/struct/DeviceUserEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/essentials/struct/DeviceUserEntry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/photoniced.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/photoniced.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photoniced.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/photoniced.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/austin-chan-ukzHlkoz1IE-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/aziz-acharki-H90Af2TFqng-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/davisuko-5E5N49RWtbA-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/florian-klauer-mk7D-4UCfmg-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/jason-leung-Xaanw0s0pMk-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/katie-moum-iRMUDX0kyOc-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/kristopher-roller-PC_lbSSxCZE-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/Teststs/sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/DeviceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/DeviceTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/.photon.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_assets/real/.photon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/austin-chan-ukzHlkoz1IE-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/aziz-acharki-H90Af2TFqng-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/davisuko-5E5N49RWtbA-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/florian-klauer-mk7D-4UCfmg-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/jason-leung-Xaanw0s0pMk-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/katie-moum-iRMUDX0kyOc-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/kristopher-roller-PC_lbSSxCZE-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/photoniced_unittest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/photoniced_unittest.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/photoniced_unittest.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/photoniced_unittest.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/photoniced_unittest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/photoniced_unittest.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +61,6 @@
       <option value="$PROJECT_DIR$/essentials/commandline_parser/interfaces/ICommandLineParser.cs" />
       <option value="$PROJECT_DIR$/common/Required.cs" />
       <option value="$PROJECT_DIR$/ui/Menu.cs" />
-      <option value="$PROJECT_DIR$/device/interfaces/IDeviceReader.cs" />
-      <option value="$PROJECT_DIR$/device/DeviceReader.cs" />
       <option value="$PROJECT_DIR$/device/DeviceChanger.cs" />
       <option value="$PROJECT_DIR$/device/interfaces/IDeviceChanger.cs" />
       <option value="$PROJECT_DIR$/factory/Factory.cs" />
@@ -92,15 +70,17 @@
       <option value="$PROJECT_DIR$/device/interfaces/services/IDevicePathService.cs" />
       <option value="$PROJECT_DIR$/device/services/DevicePathService.cs" />
       <option value="$PROJECT_DIR$/essentials/struct/UserEntry.cs" />
-      <option value="$PROJECT_DIR$/essentials/struct/DeviceUserEntry.cs" />
       <option value="$PROJECT_DIR$/device/interfaces/IDeviceSorter.cs" />
       <option value="$PROJECT_DIR$/../photoniced_unittest/DeviceTest.cs" />
-      <option value="$PROJECT_DIR$/device/interfaces/services/IDeviceNoteService.cs" />
-      <option value="$PROJECT_DIR$/device/services/DeviceNoteService.cs" />
       <option value="$PROJECT_DIR$/essentials/path_tree/INodePrinter.cs" />
       <option value="$PROJECT_DIR$/essentials/path_tree/NodePrinter.cs" />
       <option value="$PROJECT_DIR$/essentials/path_tree/Node.cs" />
+      <option value="$PROJECT_DIR$/essentials/struct/DeviceUserEntry.cs" />
+      <option value="$PROJECT_DIR$/device/interfaces/services/IDeviceNoteService.cs" />
+      <option value="$PROJECT_DIR$/device/interfaces/IDeviceReader.cs" />
+      <option value="$PROJECT_DIR$/device/services/DeviceNoteService.cs" />
       <option value="$PROJECT_DIR$/device/DeviceSorter.cs" />
+      <option value="$PROJECT_DIR$/device/DeviceReader.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lpmaVw58s5Sw1upWWTa8szoepu" />
@@ -154,7 +134,8 @@
       <workItem from="1608303501693" duration="76000" />
       <workItem from="1608308779011" duration="535000" />
       <workItem from="1608309341676" duration="8534000" />
-      <workItem from="1608372921058" duration="6021000" />
+      <workItem from="1608372921058" duration="6337000" />
+      <workItem from="1608384836817" duration="3808000" />
     </task>
     <servers />
   </component>
@@ -178,5 +159,24 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/device/DeviceReader.cs</url>
+          <line>83</line>
+          <properties documentPath="$PROJECT_DIR$/device/DeviceReader.cs" initialLine="82" containingFunctionPresentation="method 'print_read_info'">
+            <startOffsets>
+              <option value="2696" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2741" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

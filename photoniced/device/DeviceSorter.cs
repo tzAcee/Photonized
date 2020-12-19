@@ -51,7 +51,7 @@ namespace photoniced.device
             DeviceUserEntry entry = get_user_entry();
 
             //TODO check for parser for all modules
-            var files = Directory.EnumerateFiles(_parser.DirPath, "*.*", SearchOption.AllDirectories)
+            var files = Directory.EnumerateFiles(_parser.DirPath, "*.*") // Remove/Add SearchOption if dont need to resort
                 .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg") || s.EndsWith(".tif"));
 
             if (files.Count() == 0)

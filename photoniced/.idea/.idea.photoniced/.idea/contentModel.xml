@@ -85,11 +85,7 @@
         </e>
         <e p="real" t="Include">
           <e p=".photon.json" t="Include" />
-          <e p="asd" t="Include" />
-          <e p="asdasd" t="Include" />
-          <e p="asdasdasd" t="Include" />
-          <e p="notin" t="Include" />
-          <e p="ued Korea" t="Include">
+          <e p="asdasd" t="Include">
             <e p="austin-chan-ukzHlkoz1IE-unsplash.jpg" t="Include" />
             <e p="aziz-acharki-H90Af2TFqng-unsplash.jpg" t="Include" />
             <e p="davisuko-5E5N49RWtbA-unsplash.jpg" t="Include" />

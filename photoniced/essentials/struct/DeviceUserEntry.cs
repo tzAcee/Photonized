@@ -16,8 +16,8 @@ namespace photoniced.essentials
             SortTime = time;
         }
         
-        public string SortWord { get; }
-        public string Description { get; }
-        public DateTime SortTime { get; }
+        public string SortWord { get; set; }
+        public string Description { get; set; }
+        public DateTime SortTime { get; set; }
     }
 }
