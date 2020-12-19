@@ -5,36 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e62c42d9-efcb-4760-8159-59de2c204ad5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/austin-chan-ukzHlkoz1IE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/aziz-acharki-H90Af2TFqng-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/davisuko-5E5N49RWtbA-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/florian-klauer-mk7D-4UCfmg-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/jason-leung-Xaanw0s0pMk-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/katie-moum-iRMUDX0kyOc-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/kristopher-roller-PC_lbSSxCZE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_assets/real/asdasd/sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photoniced.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuBuilderTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuViewTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/interface_tests/IMenuBuilderTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device/DeviceReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/DeviceReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device/DeviceSorter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/DeviceSorter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device/interfaces/IDeviceReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/interfaces/IDeviceReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device/interfaces/services/IDeviceNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/interfaces/services/IDeviceNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device/services/DeviceNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/services/DeviceNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/essentials/struct/DeviceUserEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/essentials/struct/DeviceUserEntry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/.photon.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_assets/real/.photon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/austin-chan-ukzHlkoz1IE-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/aziz-acharki-H90Af2TFqng-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/davisuko-5E5N49RWtbA-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/florian-klauer-mk7D-4UCfmg-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/jason-leung-Xaanw0s0pMk-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/katie-moum-iRMUDX0kyOc-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/kristopher-roller-PC_lbSSxCZE-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_assets/real/ued Korea/sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/interfaces/IMenuBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ui/interfaces/IMenuBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/DeviceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/Device/DeviceTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/photoniced_unittest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/photoniced_unittest.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +42,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19B3447F-EED7-48F4-B362-071ED33E9131/45/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19B3447F-EED7-48F4-B362-071ED33E9131/2F2/FileStream.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../photoniced_unittest/DeviceTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../photoniced_unittest/Device/DeviceTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AE6C5606-323D-493F-8435-C2D7CBA7A978/9d/d34c2ff1/ConsoleMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/938454C9-1FD6-4184-AB20-0E4F4FEEF3EB/21/FileSystemEnumerator.Unix.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -60,10 +55,8 @@
       <option value="$PROJECT_DIR$/essentials/commandline_parser/CommandLineParser.cs" />
       <option value="$PROJECT_DIR$/essentials/commandline_parser/interfaces/ICommandLineParser.cs" />
       <option value="$PROJECT_DIR$/common/Required.cs" />
-      <option value="$PROJECT_DIR$/ui/Menu.cs" />
       <option value="$PROJECT_DIR$/device/DeviceChanger.cs" />
       <option value="$PROJECT_DIR$/device/interfaces/IDeviceChanger.cs" />
-      <option value="$PROJECT_DIR$/factory/Factory.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
       <option value="$PROJECT_DIR$/device/Device.cs" />
       <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
@@ -81,6 +74,15 @@
       <option value="$PROJECT_DIR$/device/services/DeviceNoteService.cs" />
       <option value="$PROJECT_DIR$/device/DeviceSorter.cs" />
       <option value="$PROJECT_DIR$/device/DeviceReader.cs" />
+      <option value="$PROJECT_DIR$/factory/Factory.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/UI/MenuBuilderTest.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/UI/MenuViewTest.cs" />
+      <option value="$PROJECT_DIR$/ui/Menu.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/UI/MenuTest.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/UI/interface_tests/IMenuViewTest.cs" />
+      <option value="$PROJECT_DIR$/ui/interfaces/IMenuBuilder.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/UI/interface_tests/IMenuBuilderTest.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/Device/DeviceTest.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lpmaVw58s5Sw1upWWTa8szoepu" />
@@ -102,10 +104,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/photoniced.csproj" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="RiderDotCoverHighlightingPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Launch Settings Profile.photoniced">
     <configuration name="photoniced" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/photoniced.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -135,12 +137,91 @@
       <workItem from="1608308779011" duration="535000" />
       <workItem from="1608309341676" duration="8534000" />
       <workItem from="1608372921058" duration="6337000" />
-      <workItem from="1608384836817" duration="3808000" />
+      <workItem from="1608384836817" duration="4646000" />
+      <workItem from="1608389503299" duration="4258000" />
+      <workItem from="1608397196805" duration="449000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="320" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DeviceTest 100% 0/10" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DeviceTest 100% 0/10" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="constructor_test() 100% 0/10" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UI 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UI 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="interface_tests 0% 12/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UI 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="interface_tests 0% 12/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="IMenuBuilderTest 0% 12/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -159,24 +240,5 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/device/DeviceReader.cs</url>
-          <line>83</line>
-          <properties documentPath="$PROJECT_DIR$/device/DeviceReader.cs" initialLine="82" containingFunctionPresentation="method 'print_read_info'">
-            <startOffsets>
-              <option value="2696" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2741" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

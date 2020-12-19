@@ -12,7 +12,7 @@ namespace photoniced_unittest
     public class DeviceTest
     {
         [TestMethod]
-        public void ConstructorTest()
+        public void constructor_test()
         {
             Assert.ThrowsException<ArgumentNullException>(() => new Device(null, null, null, null));
 

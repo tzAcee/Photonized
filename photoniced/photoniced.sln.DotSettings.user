@@ -1,0 +1,16 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/home/fleexo/.cache/JetBrains/Rider2020.3/resharper-host/temp/Rider/vAny/CoverageData/_photoniced.1086634153/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=56342f96_002Dab1c_002D45b4_002Dafbf_002D3ac39ea28459/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="constructor_test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::EC18D70F-58FA-4D46-9978-D9F627C971D3::.NETCoreApp,Version=v3.1::photoniced_unittest.DeviceTest.constructor_test&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	</wpf:ResourceDictionary>

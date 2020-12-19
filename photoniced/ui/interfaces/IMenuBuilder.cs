@@ -8,7 +8,7 @@ namespace photoniced.ui.repos
 {
     public interface IMenuBuilder
     {
-        static List<MethodsHolder> get_methods(Device dev) => new List<MethodsHolder>() { };
+        static List<MethodsHolder> get_methods(Device dev) => new List<MethodsHolder>();
 
         static string [] get_args() => new string[0];
 
