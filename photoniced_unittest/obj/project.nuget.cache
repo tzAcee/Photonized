@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kdFe/+mddtTxaP8N0iRrKkMXaEvsI9vJ2HJMIs5/xKhpTzv9n0SHWJnyMZ7fEE5iUlxIjy3cvGOaQCeR5lrKzw==",
+  "dgSpecHash": "OTxlga4ISi2k3m9T2SwpIQ3L1JJPvx5h79Id1tMYG595e1NTutjCGm3iNnWcnT3zSpT47k+KlzSMgrKtfORnlg==",
   "success": true,
   "projectFilePath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced_unittest/photoniced_unittest.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,6 @@
     "/home/fleexo/.nuget/packages/consolemenu-simple/2.4.0/consolemenu-simple.2.4.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/coverlet.collector/1.2.0/coverlet.collector.1.2.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",
-    "/home/fleexo/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",
     "/home/fleexo/.nuget/packages/microsoft.net.test.sdk/16.5.0/microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -20,7 +19,7 @@
     "/home/fleexo/.nuget/packages/mstest.testadapter/2.1.0/mstest.testadapter.2.1.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/mstest.testframework/2.1.0/mstest.testframework.2.1.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
-    "/home/fleexo/.nuget/packages/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg.sha512",
+    "/home/fleexo/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
     "/home/fleexo/.nuget/packages/nuget.frameworks/5.0.0/nuget.frameworks.5.0.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -83,7 +82,6 @@
     "/home/fleexo/.nuget/packages/system.runtime.interopservices/4.3.0/system.runtime.interopservices.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/system.runtime.interopservices.runtimeinformation/4.3.0/system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/system.runtime.numerics/4.3.0/system.runtime.numerics.4.3.0.nupkg.sha512",
-    "/home/fleexo/.nuget/packages/system.runtime.serialization.primitives/4.1.1/system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
     "/home/fleexo/.nuget/packages/system.security.cryptography.algorithms/4.3.0/system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/system.security.cryptography.cng/4.3.0/system.security.cryptography.cng.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/system.security.cryptography.csp/4.3.0/system.security.cryptography.csp.4.3.0.nupkg.sha512",

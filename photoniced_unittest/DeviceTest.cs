@@ -2,7 +2,9 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using photoniced.device;
 using Moq;
+using photoniced.device.interfaces;
 using photoniced.essentials.commandline_parser.interfaces;
+using photoniced.interfaces;
 
 namespace photoniced_unittest
 {
@@ -12,11 +14,14 @@ namespace photoniced_unittest
         [TestMethod]
         public void ConstructorTest()
         {
-            Assert.ThrowsException<ArgumentNullException>(() => new Device(null));
+            Assert.ThrowsException<ArgumentNullException>(() => new Device(null, null, null, null));
 
-            var comandline = new Mock<ICommandLineParser>();
-            var dev = new Device(comandline.Object);
-            Assert.AreSame(dev.CmdParser, comandline.Object);
+            var commandLine = new Mock<ICommandLineParser>();
+            var reader = new Mock<IDeviceReader>();
+            var sorter = new Mock<IDeviceSorter>();
+            var changer = new Mock<IDeviceChanger>();
+            var dev = new Device(commandLine.Object, reader.Object, sorter.Object, changer.Object);
+            Assert.AreSame(dev.CmdParser, commandLine.Object);
         }
     }
 }

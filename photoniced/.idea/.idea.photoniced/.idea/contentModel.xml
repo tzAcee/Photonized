@@ -29,10 +29,12 @@
           <e p="IDeviceReader.cs" t="Include" />
           <e p="IDeviceSorter.cs" t="Include" />
           <e p="services" t="Include">
+            <e p="IDeviceNoteService.cs" t="Include" />
             <e p="IDevicePathService.cs" t="Include" />
           </e>
         </e>
         <e p="services" t="Include">
+          <e p="DeviceNoteService.cs" t="Include" />
           <e p="DevicePathService.cs" t="Include" />
         </e>
       </e>
@@ -43,6 +45,11 @@
           <e p="interfaces" t="Include">
             <e p="ICommandLineParser.cs" t="Include" />
           </e>
+        </e>
+        <e p="path_tree" t="Include">
+          <e p="INodePrinter.cs" t="Include" />
+          <e p="Node.cs" t="Include" />
+          <e p="NodePrinter.cs" t="Include" />
         </e>
         <e p="struct" t="Include">
           <e p="DeviceUserEntry.cs" t="Include" />
@@ -77,6 +84,10 @@
           <e p="sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" t="Include" />
         </e>
         <e p="real" t="Include">
+          <e p=".photon.json" t="Include" />
+          <e p="asd" t="Include" />
+          <e p="asdasd" t="Include" />
+          <e p="asdasdasd" t="Include" />
           <e p="austin-chan-ukzHlkoz1IE-unsplash.jpg" t="Include" />
           <e p="aziz-acharki-H90Af2TFqng-unsplash.jpg" t="Include" />
           <e p="davisuko-5E5N49RWtbA-unsplash.jpg" t="Include" />
@@ -84,6 +95,7 @@
           <e p="jason-leung-Xaanw0s0pMk-unsplash.jpg" t="Include" />
           <e p="katie-moum-iRMUDX0kyOc-unsplash.jpg" t="Include" />
           <e p="kristopher-roller-PC_lbSSxCZE-unsplash.jpg" t="Include" />
+          <e p="notin" t="Include" />
           <e p="sahil-sorathiya-YW3F-C5e8SE-unsplash.jpg" t="Include" />
         </e>
       </e>

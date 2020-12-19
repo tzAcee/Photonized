@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/CZfQvsh1D8AA6LPNeyjgS2AVWluGqBRiSylxQq5bpb7LZx+SArhJLYj3iIhhenF8DAkE6da7oU9n7HLaILodA==",
+  "dgSpecHash": "dOOpXbElemwpkTTMUpIb2wgzoddsEetONVUGmGI2JsNJzxO6/Rm9Luw5O1QRq1k0gpf1gyRShmtrpdRtXdeprA==",
   "success": true,
   "projectFilePath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/home/fleexo/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
+    "/home/fleexo/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
     "/home/fleexo/.nuget/packages/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/home/fleexo/.nuget/packages/runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

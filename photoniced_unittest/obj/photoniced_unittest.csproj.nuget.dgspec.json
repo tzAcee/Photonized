@@ -43,6 +43,10 @@
             "ConsoleMenu-simple": {
               "target": "Package",
               "version": "[2.4.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
@@ -121,6 +125,10 @@
             "Moq": {
               "target": "Package",
               "version": "[4.15.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "coverlet.collector": {
               "target": "Package",

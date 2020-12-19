@@ -14,3 +14,4 @@
 /home/fleexo/_dev/programmentwurf/photonized/photoniced/obj/Debug/netcoreapp3.1/photoniced.dll
 /home/fleexo/_dev/programmentwurf/photonized/photoniced/obj/Debug/netcoreapp3.1/photoniced.pdb
 /home/fleexo/_dev/programmentwurf/photonized/photoniced/obj/Debug/netcoreapp3.1/photoniced.genruntimeconfig.cache
+/home/fleexo/_dev/programmentwurf/photonized/photoniced/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll

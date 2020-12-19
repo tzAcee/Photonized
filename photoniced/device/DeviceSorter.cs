@@ -6,6 +6,7 @@ using photoniced.essentials.commandline_parser.interfaces;
 using photoniced.common;
 using photoniced.device.services;
 using photoniced.essentials;
+using photoniced.essentials.path_tree;
 using photoniced.interfaces;
 
 namespace photoniced.device
@@ -51,7 +52,7 @@ namespace photoniced.device
 
             //TODO check for parser for all modules
             var files = Directory.EnumerateFiles(_parser.DirPath, "*.*", SearchOption.AllDirectories)
-                .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
+                .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg") || s.EndsWith(".tif"));
 
             if (files.Count() == 0)
                 return;
@@ -82,6 +83,17 @@ namespace photoniced.device
             if (index == 0)
             {
                 Directory.Delete(sortPath.FullName);
+            }
+            else
+            {
+                DeviceNoteService.add_entry(_parser.DirPath, entry);
+                var tree = new Node(_parser.DirPath);
+                
+                Console.Clear();
+                Console.WriteLine("Your new Structure! Press Any Key to proceed.");
+                Console.WriteLine();
+                NodePrinter.print_tree(tree, "", true);
+                Console.ReadLine();
             }
         }
     }
