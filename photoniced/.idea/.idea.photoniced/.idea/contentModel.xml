@@ -108,19 +108,14 @@
       </e>
     </e>
     <e p="$PROJECT_DIR$/../photoniced_unittest" t="IncludeRecursive">
-      <e p="Device" t="Include">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="common" t="Include">
+        <e p="RequiredTest.cs" t="Include" />
+      </e>
+      <e p="device" t="Include">
         <e p="DeviceTest.cs" t="Include" />
       </e>
-      <e p="Factory" t="Include" />
-      <e p="UI" t="Include">
-        <e p="MenuBuilderTest.cs" t="Include" />
-        <e p="MenuTest.cs" t="Include" />
-        <e p="MenuViewTest.cs" t="Include" />
-        <e p="interface_tests" t="Include">
-          <e p="IMenuBuilderTest.cs" t="Include" />
-        </e>
-      </e>
-      <e p="bin" t="ExcludeRecursive" />
+      <e p="factory" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
@@ -129,6 +124,14 @@
         </e>
       </e>
       <e p="photoniced_unittest.csproj" t="IncludeRecursive" />
+      <e p="ui" t="Include">
+        <e p="MenuBuilderTest.cs" t="Include" />
+        <e p="MenuTest.cs" t="Include" />
+        <e p="MenuViewTest.cs" t="Include" />
+        <e p="interface_tests" t="Include">
+          <e p="IMenuBuilderTest.cs" t="Include" />
+        </e>
+      </e>
     </e>
   </component>
 </project>

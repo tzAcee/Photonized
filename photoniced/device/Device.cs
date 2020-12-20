@@ -10,9 +10,9 @@ namespace photoniced.device
     {
         public ICommandLineParser CmdParser { get; }
 
-        private IDeviceReader _reader;
-        private IDeviceSorter _sorter;
-        private IDeviceChanger _changer;
+        private readonly IDeviceReader _reader;
+        private readonly IDeviceSorter _sorter;
+        private readonly IDeviceChanger _changer;
 
         public Device(ICommandLineParser parser, IDeviceReader deviceReader, IDeviceSorter deviceSorter, IDeviceChanger deviceChanger)
         {   

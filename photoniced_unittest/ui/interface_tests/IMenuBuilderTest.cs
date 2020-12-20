@@ -1,11 +1,9 @@
-using System.Collections.Generic;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using photoniced.device;
-using photoniced.essentials;
+
 using photoniced.ui.repos;
 
-namespace photoniced_unittest.UI.interface_tests
+namespace photoniced_unittest.ui.interface_tests
 {
     [TestClass]
     public class IMenuBuilderTest

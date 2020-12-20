@@ -7,7 +7,7 @@ using photoniced.ui.repos;
 
 namespace photoniced.ui
 {
-    class MenuBuilder : IMenuBuilder
+    public class MenuBuilder : IMenuBuilder
     {
         public static string[] get_args()
         {
@@ -21,6 +21,10 @@ namespace photoniced.ui
 
         public static List<MethodsHolder> get_methods(Device dev)
         {
+            if (dev == null)
+            {
+                throw new ArgumentNullException();
+            }
             List<MethodsHolder> res = new List<MethodsHolder>();
 
             res.Add(new MethodsHolder(() =>               dev.sort(), "Sort Device"));

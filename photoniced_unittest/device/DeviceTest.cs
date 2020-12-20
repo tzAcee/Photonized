@@ -15,7 +15,11 @@ namespace photoniced_unittest
         public void constructor_test()
         {
             Assert.ThrowsException<ArgumentNullException>(() => new Device(null, null, null, null));
+        }
 
+        [TestMethod]
+        public void cmd_parser_dependency_test()
+        {
             var commandLine = new Mock<ICommandLineParser>();
             var reader = new Mock<IDeviceReader>();
             var sorter = new Mock<IDeviceSorter>();

@@ -5,24 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e62c42d9-efcb-4760-8159-59de2c204ad5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/photoniced.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuBuilderTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuViewTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/UI/interface_tests/IMenuBuilderTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../photoniced_unittest/common/RequiredTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.photoniced/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/device/Device.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/interfaces/IMenuBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ui/interfaces/IMenuBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/DeviceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/Device/DeviceTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photoniced.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/photoniced.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/MenuBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MenuBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/MenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MenuView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/Device/DeviceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/device/DeviceTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuBuilderTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/ui/MenuBuilderTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/ui/MenuTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/UI/MenuViewTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/ui/MenuViewTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/UI/interface_tests/IMenuBuilderTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/ui/interface_tests/IMenuBuilderTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/bin/Debug/netcoreapp3.1/photoniced_unittest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../photoniced_unittest/obj/Debug/netcoreapp3.1/photoniced_unittest.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -42,7 +42,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19B3447F-EED7-48F4-B362-071ED33E9131/45/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19B3447F-EED7-48F4-B362-071ED33E9131/2F2/FileStream.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../photoniced_unittest/Device/DeviceTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../photoniced_unittest/device/DeviceTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AE6C5606-323D-493F-8435-C2D7CBA7A978/9d/d34c2ff1/ConsoleMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/938454C9-1FD6-4184-AB20-0E4F4FEEF3EB/21/FileSystemEnumerator.Unix.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -50,7 +50,6 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/../photoniced_unittest/UnitTest1.cs" />
       <option value="$PROJECT_DIR$/../.gitignore" />
-      <option value="$PROJECT_DIR$/ui/MenuView.cs" />
       <option value="$PROJECT_DIR$/common/Requiered.cs" />
       <option value="$PROJECT_DIR$/essentials/commandline_parser/CommandLineParser.cs" />
       <option value="$PROJECT_DIR$/essentials/commandline_parser/interfaces/ICommandLineParser.cs" />
@@ -58,7 +57,6 @@
       <option value="$PROJECT_DIR$/device/DeviceChanger.cs" />
       <option value="$PROJECT_DIR$/device/interfaces/IDeviceChanger.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
-      <option value="$PROJECT_DIR$/device/Device.cs" />
       <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
       <option value="$PROJECT_DIR$/device/interfaces/services/IDevicePathService.cs" />
       <option value="$PROJECT_DIR$/device/services/DevicePathService.cs" />
@@ -83,6 +81,15 @@
       <option value="$PROJECT_DIR$/ui/interfaces/IMenuBuilder.cs" />
       <option value="$PROJECT_DIR$/../photoniced_unittest/UI/interface_tests/IMenuBuilderTest.cs" />
       <option value="$PROJECT_DIR$/../photoniced_unittest/Device/DeviceTest.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/ui/interface_tests/IMenuBuilderTest.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/device/DeviceTest.cs" />
+      <option value="$PROJECT_DIR$/device/Device.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/common/RequiredTest.cs" />
+      <option value="$PROJECT_DIR$/ui/MenuBuilder.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/ui/MenuBuilderTest.cs" />
+      <option value="$PROJECT_DIR$/ui/MenuView.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/ui/MenuViewTest.cs" />
+      <option value="$PROJECT_DIR$/../photoniced_unittest/ui/MenuTest.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lpmaVw58s5Sw1upWWTa8szoepu" />
@@ -104,7 +111,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/photoniced.csproj" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="RiderDotCoverHighlightingPageId" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.photoniced">
@@ -140,6 +147,10 @@
       <workItem from="1608384836817" duration="4646000" />
       <workItem from="1608389503299" duration="4258000" />
       <workItem from="1608397196805" duration="449000" />
+      <workItem from="1608401034814" duration="918000" />
+      <workItem from="1608464336271" duration="4632000" />
+      <workItem from="1608468990200" duration="133000" />
+      <workItem from="1608469152148" duration="11000" />
     </task>
     <servers />
   </component>
@@ -150,74 +161,111 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="320" />
+    <option name="symbolColumnWidth" value="439" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DeviceTest 100% 0/10" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="common 0% 14/14" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DeviceTest 100% 0/10" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="constructor_test() 100% 0/10" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="UnitTest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced_unittest 28% 57/79" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="common 0% 14/14" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RequiredTest 0% 14/14" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UI 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UI 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="interface_tests 0% 12/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UnitTest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="photoniced_unittest 33% 20/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="UI 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="interface_tests 0% 12/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="IMenuBuilderTest 0% 12/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="common 100% 0/5" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="common 100% 0/5" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Required 100% 0/5" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="ui 9% 52/57" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="ui 9% 52/57" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Menu 63% 3/8" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="ui 9% 52/57" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MenuBuilder 0% 20/20" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="device 6% 214/228" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 418/464" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="photoniced 6% 361/385" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="device 6% 214/228" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Device 61% 9/23" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />

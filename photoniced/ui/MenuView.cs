@@ -4,6 +4,7 @@ using photoniced.repos;
 using ConsoleTools;
 using photoniced.essentials;
 using System.IO;
+using photoniced.common;
 
 namespace photoniced.ui
 {
@@ -14,8 +15,8 @@ namespace photoniced.ui
 
         public MenuView(string[] args, int level, List<MethodsHolder> mh, string start_path) : base(args, level)
         {
-            _methods = mh;
-            _path = start_path;
+            _methods = Required.NotNull(mh, nameof(mh));
+            _path = Required.NotNull(start_path, nameof(start_path));
             render();
         }
         public void configure()

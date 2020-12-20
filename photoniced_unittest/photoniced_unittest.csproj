@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Factory" />
+    <Folder Include="factory" />
   </ItemGroup>
 
 </Project>

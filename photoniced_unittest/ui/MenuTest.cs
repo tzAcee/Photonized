@@ -7,17 +7,17 @@ using photoniced.essentials.commandline_parser.interfaces;
 using photoniced.interfaces;
 using photoniced.ui;
 
-namespace photoniced_unittest.UI
+namespace photoniced_unittest.ui
 {
     [TestClass]
     public class MenuTest
     {
         [TestMethod]
-        public void constructor_test()
+        public void constructor_exception_test()
         {
             Assert.ThrowsException<ArgumentNullException>(() => new Menu(null));
-
         }
+        
         
     }
 }
