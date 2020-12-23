@@ -11,9 +11,10 @@ namespace photoniced.device.services
     {
         private const string InfoFileName = ".photon.json";
 
-        private static string get_file_path(string path, bool create = true)
+        public static string get_file_path(string path, bool create = true)
         {
             string fullPath = path + "/" + InfoFileName;
+            if (path == null) fullPath = null;  
             if (create == true)
             {
                 if(!File.Exists(fullPath))

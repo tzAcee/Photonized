@@ -113,7 +113,18 @@
         <e p="RequiredTest.cs" t="Include" />
       </e>
       <e p="device" t="Include">
+        <e p="DeviceChangerTest.cs" t="Include" />
+        <e p="DeviceReaderTest.cs" t="Include" />
+        <e p="DeviceSorterTest.cs" t="Include" />
         <e p="DeviceTest.cs" t="Include" />
+        <e p="service_test" t="Include">
+          <e p="DeviceNoteServiceTest.cs" t="Include" />
+          <e p="DevicePathServiceTest.cs" t="Include" />
+          <e p="interfaces" t="Include">
+            <e p="IDeviceNoteServiceTest.cs" t="Include" />
+            <e p="IDevicePathServiceTest.cs" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="factory" t="Include" />
       <e p="obj" t="ExcludeRecursive">

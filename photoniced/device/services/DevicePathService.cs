@@ -6,8 +6,10 @@ namespace photoniced.device.services
 {
     public class DevicePathService : IDevicePathService
     {
-        static bool path_valid(string path)
+        public static bool path_valid(string path)
         {
+            if (path == null)
+              return false;
             try
             {
                 Path.GetDirectoryName(path);
