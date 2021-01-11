@@ -18,7 +18,7 @@ namespace photoniced.device
 
         private IConsole _Console;
 
-        public DeviceSorter(IConsole console )
+        public DeviceSorter(IConsole console)
         {
             _Console = Required.NotNull(console, nameof(console));
         }
@@ -30,8 +30,8 @@ namespace photoniced.device
 
         public DeviceUserEntry get_user_entry()
         {
-            Console.WriteLine("For which day you want to sort the pictures? (DD/MM/YYYY)");
-            string date = Console.ReadLine();
+            _Console.WriteLine("For which day you want to sort the pictures? (DD/MM/YYYY)");
+            string date = _Console.ReadLine();
             var dateSplitted = date.Split('/');
             if (dateSplitted.Length != 3)
             {
@@ -39,11 +39,11 @@ namespace photoniced.device
                 throw new InvalidDataException();
             }
             
-            Console.WriteLine("What did you do @ this day?");
-            string toSort = Console.ReadLine();
+            _Console.WriteLine("What did you do @ this day?");
+            string toSort = _Console.ReadLine();
             
             Console.WriteLine("Give a little description for this day.");
-            string desc = Console.ReadLine();
+            string desc = _Console.ReadLine();
 
             DateTime parsedTime = new DateTime(Convert.ToInt32(dateSplitted[2]), Convert.ToInt32(dateSplitted[1]),
                 Convert.ToInt32(dateSplitted[0]));
@@ -93,11 +93,11 @@ namespace photoniced.device
                 DeviceNoteService.add_entry(_parser.DirPath, entry);
                 var tree = new Node(_parser.DirPath);
                 
-                Console.Clear();
-                Console.WriteLine("Your new Structure! Press Any Key to proceed.");
-                Console.WriteLine();
+                _Console.Clear();
+                _Console.WriteLine("Your new Structure! Press Any Key to proceed.");
+                _Console.WriteLine("");
                 NodePrinter.print_tree(tree, "", true);
-                Console.ReadLine();
+                _Console.ReadLine();
             }
         }
     }

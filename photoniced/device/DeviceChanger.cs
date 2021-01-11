@@ -5,16 +5,17 @@ using photoniced.essentials.commandline_parser.interfaces;
 using System;
 using System.IO;
 using photoniced.essentials;
+using photoniced.essentials.ConsoleUnitWrapper;
 
 namespace photoniced.device
 {
     public class DeviceChanger : IDeviceChanger
     {
         private ICommandLineParser _parser;
-        
-        public DeviceChanger()
+        private IConsole _Console;
+        public DeviceChanger(IConsole console)
         {
-
+            _Console = Required.NotNull(console, nameof(console));
         }
 
         public void set_parser(ICommandLineParser parser)
@@ -29,8 +30,8 @@ namespace photoniced.device
             string path;
             try
             {
-                Console.Write("Paste your new path: ");
-                path = Console.ReadLine();
+                _Console.Write("Paste your new path: ");
+                path = _Console.ReadLine();
                 Path.GetDirectoryName(path);
             }
             catch(Exception e)

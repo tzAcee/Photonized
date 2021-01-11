@@ -6,6 +6,7 @@ using photoniced.device.interfaces;
 using photoniced.device.services;
 using photoniced.essentials;
 using photoniced.essentials.commandline_parser.interfaces;
+using photoniced.essentials.ConsoleUnitWrapper;
 using photoniced.essentials.path_tree;
 
 namespace photoniced.device
@@ -13,9 +14,10 @@ namespace photoniced.device
     public class DeviceReader : IDeviceReader
     {
         private ICommandLineParser _parser;
-        public DeviceReader()
+        private IConsole _Console;
+        public DeviceReader(IConsole console)
         {
-            
+            _Console = Required.NotNull(console, nameof(console));
         }
 
         public void set_parser(ICommandLineParser parser)
@@ -33,10 +35,10 @@ namespace photoniced.device
         {
             var tree = new Node(_parser.DirPath);
             
-            Console.Clear();
-            Console.WriteLine("Device Structure: (Any Key to continue)");
+            _Console.Clear();
+            _Console.WriteLine("Device Structure: (Any Key to continue)");
             NodePrinter.print_tree(tree, "", true);
-            Console.ReadLine();
+            _Console.ReadLine();
         }
 
         public void compare(List<DeviceUserEntry> entries)
@@ -64,35 +66,35 @@ namespace photoniced.device
             var entries = DeviceNoteService.read_entries(_parser.DirPath);
             if (entries == null)
             {
-                Console.WriteLine("No Entries found.");
-                Console.ReadLine();
+                _Console.WriteLine("No Entries found.");
+                _Console.ReadLine();
                 return;
             }
             if (entries.Count == 0)
             {
-                Console.Clear();
-                Console.WriteLine("No Entries... (Any Key to continue)");
-                Console.ReadLine();
+                _Console.Clear();
+                _Console.WriteLine("No Entries... (Any Key to continue)");
+                _Console.ReadLine();
                 return;
             }
             compare(entries);
-            Console.Write("What is the name of the entry you want to delete? ");
-            var name = Console.ReadLine();
+            _Console.Write("What is the name of the entry you want to delete? ");
+            var name = _Console.ReadLine();
             var item = entries.Find(x => x.SortWord == name);
             if(item.SortWord == null)
             {
-                Console.WriteLine("No entry found.");
-                Console.ReadLine();
+                _Console.WriteLine("No entry found.");
+                _Console.ReadLine();
                 return;
             }
 
-            Console.Write("Entry " + item.SortWord + " found, wish to delete it? y/N: ");
-            var inp = Console.ReadLine();
+            _Console.Write("Entry " + item.SortWord + " found, wish to delete it? y/N: ");
+            var inp = _Console.ReadLine();
             if(inp.ToUpper() == "Y")
             {
                 DeviceNoteService.delete_entry(_parser.DirPath, item);
-                Console.WriteLine("Want also to exclude the sorted data & delete the created directory for the entry? Y/n: ");
-                inp = Console.ReadLine();
+                _Console.WriteLine("Want also to exclude the sorted data & delete the created directory for the entry? Y/n: ");
+                inp = _Console.ReadLine();
                 if (inp.ToUpper() == "N")
                 {
                     return;
@@ -113,33 +115,33 @@ namespace photoniced.device
             var entries = DeviceNoteService.read_entries(_parser.DirPath);
             if (entries == null)
             {
-                Console.ReadLine();
+                _Console.ReadLine();
                 return;
             }
             if (entries.Count == 0)
             {
-                Console.Clear();
-                Console.WriteLine("No Entries... (Any Key to continue)");
-                Console.ReadLine();
+                _Console.Clear();
+                _Console.WriteLine("No Entries... (Any Key to continue)");
+                _Console.ReadLine();
                 return;
             }
             compare(entries);
-            Console.Clear();
-            Console.WriteLine("Found Entries for this Structure: (Any Key to continue)");
-            Console.WriteLine("-*********************-");
+            _Console.Clear();
+            _Console.WriteLine("Found Entries for this Structure: (Any Key to continue)");
+            _Console.WriteLine("-*********************-");
             int index = 0;
             foreach (var entry in entries)
             {
                 index++;
-                Console.WriteLine("- Sorted After: "+entry.SortWord+" | Sorted For: "+entry.SortTime.Date);
-                Console.WriteLine("- Description:");
-                Console.WriteLine("- "+entry.Description);
+                _Console.WriteLine("- Sorted After: "+entry.SortWord+" | Sorted For: "+entry.SortTime.Date);
+                _Console.WriteLine("- Description:");
+                _Console.WriteLine("- "+entry.Description);
                 if (index != entries.Count ) 
-                    Console.WriteLine("-----------------------");
+                    _Console.WriteLine("-----------------------");
             }
-            Console.WriteLine("-*********************-");
+            _Console.WriteLine("-*********************-");
             
-            Console.ReadLine();
+            _Console.ReadLine();
         }
     }
 }

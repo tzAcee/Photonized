@@ -20,5 +20,10 @@ namespace photoniced.essentials.ConsoleUnitWrapper
             {
                 return Console.ReadLine();
             }
+
+            public void Clear()
+            {
+                Console.Clear();
+            }
     }
 }

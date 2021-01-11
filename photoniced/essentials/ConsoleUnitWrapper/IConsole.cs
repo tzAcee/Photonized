@@ -8,6 +8,7 @@ namespace photoniced.essentials.ConsoleUnitWrapper
     {
         void Write(string message);
         void WriteLine(string message);
+        void Clear();
         string ReadLine();
     }
 }
