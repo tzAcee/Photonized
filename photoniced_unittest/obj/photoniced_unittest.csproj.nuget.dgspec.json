@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/home/fleexo/_dev/programmentwurf/photonized/photoniced_unittest/photoniced_unittest.csproj": {}
+    "F:\\Projects\\VS\\C#\\photonized\\photoniced_unittest\\photoniced_unittest.csproj": {}
   },
   "projects": {
-    "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj": {
+    "F:\\Projects\\VS\\C#\\photonized\\photoniced\\photoniced.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj",
+        "projectUniqueName": "F:\\Projects\\VS\\C#\\photonized\\photoniced\\photoniced.csproj",
         "projectName": "photoniced",
-        "projectPath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj",
-        "packagesPath": "/home/fleexo/.nuget/packages/",
-        "outputPath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/obj/",
+        "projectPath": "F:\\Projects\\VS\\C#\\photonized\\photoniced\\photoniced.csproj",
+        "packagesPath": "C:\\Users\\FleeXo\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\VS\\C#\\photonized\\photoniced\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/fleexo/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\FleeXo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "CommandLineParser": {
               "target": "Package",
@@ -59,44 +63,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/fleexo/_dev/programmentwurf/photonized/photoniced_unittest/photoniced_unittest.csproj": {
+    "F:\\Projects\\VS\\C#\\photonized\\photoniced_unittest\\photoniced_unittest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fleexo/_dev/programmentwurf/photonized/photoniced_unittest/photoniced_unittest.csproj",
+        "projectUniqueName": "F:\\Projects\\VS\\C#\\photonized\\photoniced_unittest\\photoniced_unittest.csproj",
         "projectName": "photoniced_unittest",
-        "projectPath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced_unittest/photoniced_unittest.csproj",
-        "packagesPath": "/home/fleexo/.nuget/packages/",
-        "outputPath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced_unittest/obj/",
+        "projectPath": "F:\\Projects\\VS\\C#\\photonized\\photoniced_unittest\\photoniced_unittest.csproj",
+        "packagesPath": "C:\\Users\\FleeXo\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\VS\\C#\\photonized\\photoniced_unittest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/fleexo/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\FleeXo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj": {
-                "projectPath": "/home/fleexo/_dev/programmentwurf/photonized/photoniced/photoniced.csproj"
+              "F:\\Projects\\VS\\C#\\photonized\\photoniced\\photoniced.csproj": {
+                "projectPath": "F:\\Projects\\VS\\C#\\photonized\\photoniced\\photoniced.csproj"
               }
             }
           }
@@ -109,6 +110,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -145,18 +147,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

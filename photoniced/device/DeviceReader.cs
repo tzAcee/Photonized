@@ -59,9 +59,63 @@ namespace photoniced.device
                 }
         }
 
+        public void delete()
+        {
+            var entries = DeviceNoteService.read_entries(_parser.DirPath);
+            if (entries == null)
+            {
+                Console.WriteLine("No Entries found.");
+                Console.ReadLine();
+                return;
+            }
+            if (entries.Count == 0)
+            {
+                Console.Clear();
+                Console.WriteLine("No Entries... (Any Key to continue)");
+                Console.ReadLine();
+                return;
+            }
+            compare(entries);
+            Console.Write("What is the name of the entry you want to delete? ");
+            var name = Console.ReadLine();
+            var item = entries.Find(x => x.SortWord == name);
+            if(item.SortWord == null)
+            {
+                Console.WriteLine("No entry found.");
+                Console.ReadLine();
+                return;
+            }
+
+            Console.Write("Entry " + item.SortWord + " found, wish to delete it? y/N: ");
+            var inp = Console.ReadLine();
+            if(inp.ToUpper() == "Y")
+            {
+                DeviceNoteService.delete_entry(_parser.DirPath, item);
+                Console.WriteLine("Want also to exclude the sorted data & delete the created directory for the entry? Y/n: ");
+                inp = Console.ReadLine();
+                if (inp.ToUpper() == "N")
+                {
+                    return;
+                }
+                else
+                    DeviceNoteService.exclude_directory_delete(_parser.DirPath, item.SortWord);
+
+            }
+            else
+            {
+                return;
+            }
+
+        }
+
         public void print_read_info()
         {
             var entries = DeviceNoteService.read_entries(_parser.DirPath);
+            if (entries == null)
+            {
+                Console.ReadLine();
+                return;
+            }
             if (entries.Count == 0)
             {
                 Console.Clear();

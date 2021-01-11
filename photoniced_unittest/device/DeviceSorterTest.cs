@@ -2,6 +2,7 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using photoniced.device;
+using photoniced.essentials.ConsoleUnitWrapper;
 using photoniced.interfaces;
 
 namespace photoniced_unittest.device
@@ -19,7 +20,17 @@ namespace photoniced_unittest.device
         [TestMethod]
         public void get_user_entry_test()
         {
-            // TODO
+            var console = new Mock<IConsole>();
+
+            console.Setup(item => item.WriteLine("Hallo welt"));
+
+            console.Setup(func => func.ReadLine()).Returns("hallo");
+
+            var sorter = new DeviceSorter(console.Object);
+
+            console.Object.WriteLine("Hallo welt111");
+
+            console.VerifyAll();
         }
 
         [TestMethod]

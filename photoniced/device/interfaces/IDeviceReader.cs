@@ -12,6 +12,8 @@ namespace photoniced.device.interfaces
         public void print_structure();
         public void print_read_info();
 
+        public void delete();
+
         public void compare(List<DeviceUserEntry> entries);
         public void read();
     }

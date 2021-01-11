@@ -45,5 +45,10 @@ namespace photoniced.device
         { 
             _changer.change();
         }
+
+        public void delete()
+        {
+            _reader.delete();
+        }
     }
 }

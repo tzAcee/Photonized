@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using Newtonsoft.Json;
 using photoniced.device.interfaces.services;
 using photoniced.essentials;
@@ -30,6 +31,29 @@ namespace photoniced.device.services
                 Console.WriteLine(e);
                 return null;
             }
+
+        }
+
+        public static void exclude_directory_delete(string path, string sort_word)
+        {
+            string dir_path = path + "/" + sort_word + "/";
+            if (!Directory.Exists(dir_path))
+                return;
+
+            string[] entries = Directory.GetFileSystemEntries(dir_path, "*");
+            foreach(var entry in entries)
+            {
+                try
+                {
+                    File.Move(entry, path + "/" + new FileInfo(entry).Name);
+                }
+                catch(Exception e)
+                {
+                    File.Delete(entry); // either auth exception or double file exception -> so delete (which follows another exception, when auth)
+                    continue;
+                }
+            }
+            Directory.Delete(dir_path);
 
         }
 
@@ -68,7 +92,16 @@ namespace photoniced.device.services
                 return null;
             }
 
-            var data = File.ReadAllText(filePath);
+            String data;
+            try
+            {
+                data = File.ReadAllText(filePath);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return null;
+            }
             
             var jsonListFile = JsonConvert.DeserializeObject<List<DeviceUserEntry>>(data);
             if (jsonListFile == null)

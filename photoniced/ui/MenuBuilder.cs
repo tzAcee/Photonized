@@ -28,6 +28,7 @@ namespace photoniced.ui
             List<MethodsHolder> res = new List<MethodsHolder>();
 
             res.Add(new MethodsHolder(() =>               dev.sort(), "Sort Device"));
+            res.Add(new MethodsHolder(() =>               dev.delete(), "Delete Entry from Device"));
             res.Add(new MethodsHolder(() =>               dev.read(), "Read Device"));
             res.Add(new MethodsHolder(() => dev.change_device_path(), "Change Device Path"));
             res.Add(new MethodsHolder(ConsoleTools.ConsoleMenu.Close, "Close"));

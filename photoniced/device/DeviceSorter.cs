@@ -8,6 +8,7 @@ using photoniced.device.services;
 using photoniced.essentials;
 using photoniced.essentials.path_tree;
 using photoniced.interfaces;
+using photoniced.essentials.ConsoleUnitWrapper;
 
 namespace photoniced.device
 {
@@ -15,9 +16,11 @@ namespace photoniced.device
     {
         private ICommandLineParser _parser;
 
-        public DeviceSorter()
-        {
+        private IConsole _Console;
 
+        public DeviceSorter(IConsole console )
+        {
+            _Console = Required.NotNull(console, nameof(console));
         }
         
         public void set_parser(ICommandLineParser parser)
@@ -32,6 +35,7 @@ namespace photoniced.device
             var dateSplitted = date.Split('/');
             if (dateSplitted.Length != 3)
             {
+                //return new DeviceUserEntry();
                 throw new InvalidDataException();
             }
             
