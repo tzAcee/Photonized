@@ -42,7 +42,7 @@ namespace photoniced.device
             _Console.WriteLine("What did you do @ this day?");
             string toSort = _Console.ReadLine();
             
-            Console.WriteLine("Give a little description for this day.");
+            _Console.WriteLine("Give a little description for this day.");
             string desc = _Console.ReadLine();
 
             DateTime parsedTime = new DateTime(Convert.ToInt32(dateSplitted[2]), Convert.ToInt32(dateSplitted[1]),

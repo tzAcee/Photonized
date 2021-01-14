@@ -4,6 +4,7 @@ namespace photoniced.essentials.path_tree
     {
         public static void print_tree(Node tree, string indent, bool last)
         {
+            if (tree.Children == null) return;
             System.Console.WriteLine(indent + "+- " + tree.Name);
             indent += last ? "   " : "|  ";
 

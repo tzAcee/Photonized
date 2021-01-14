@@ -35,7 +35,7 @@ namespace photoniced_unittest.ui
             var dev = new Mock<Device>(new object[]{commandLine, reader, sorter, changer});
 
             var methods = MenuBuilder.get_methods(dev.Object);
-            Assert.AreEqual(4, methods.Count);
+            Assert.AreEqual(5, methods.Count);
         }
 
         [TestMethod]
