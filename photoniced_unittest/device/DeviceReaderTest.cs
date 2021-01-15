@@ -15,9 +15,7 @@ namespace photoniced_unittest.device
         [TestMethod]
         public void set_parser_test()
         {
-            var console = new Mock<IConsole>();
-            var reader = new Mock<DeviceReader>(console.Object);
-            Assert.ThrowsException<ArgumentNullException>(() => reader.Object.set_parser(null));
+            Assert.ThrowsException<ArgumentNullException>(() => new DeviceReader(null));
         }
 
         [TestMethod]
@@ -27,8 +25,6 @@ namespace photoniced_unittest.device
             var parser = new Mock<ICommandLineParser>();
             var reader = new DeviceReader(console.Object);
             reader.set_parser(parser.Object);
-
-            Assert.IsTrue(true);
         }
 
         [TestMethod]
@@ -43,15 +39,20 @@ namespace photoniced_unittest.device
         [TestMethod]
         public void read_call_structure_test()
         {
-            // TODO
-       //     var parser = new Mock<ICommandLineParser>();
-       //     var console = new Mock<IConsole>();
-       //     var reader = new Mock<DeviceReader>(console.Object);
-       //     reader.Object.set_parser(parser.Object);
 
-       //     reader.Object.read();
+            var parser = new Mock<ICommandLineParser>();
+            var console = new Mock<IConsole>();
+            var reader = new DeviceReader(console.Object);
+            reader.set_parser(parser.Object);
 
-       //     reader.Verify((m) => m.print_structure(), Times.Once);
+            console.Setup(fun => fun.Clear());
+            console.Setup(fun => fun.WriteLine("Device Structure: (Any Key to continue)"));
+            console.Setup(fun => fun.ReadLine()).Returns("");
+
+            reader.read();
+
+            console.VerifyAll();
+
         }
 
         [TestMethod]
@@ -64,6 +65,7 @@ namespace photoniced_unittest.device
 
             console.Setup(fun => fun.Clear());
             console.Setup(fun => fun.WriteLine("Device Structure: (Any Key to continue)"));
+            console.Setup(fun => fun.ReadLine()).Returns("");
 
             reader.print_structure();
 

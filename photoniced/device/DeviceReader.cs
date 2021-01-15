@@ -45,20 +45,20 @@ namespace photoniced.device
         {
             string[] paths = Directory.GetDirectories(_parser.DirPath);
  
-                foreach(var entry in entries)
+            foreach(var entry in entries)
+            {
+                bool found = false;
+                foreach (var p in paths)
                 {
-                    bool found = false;
-                    foreach (var p in paths)
+                    var info = new DirectoryInfo(p).Name;
+                    if (entry.SortWord == info)
                     {
-                        var info = new DirectoryInfo(p).Name;
-                        if (entry.SortWord == info)
-                        {
-                            found = true;
-                        }
+                        found = true;
                     }
-                    if(found == false)
-                        DeviceNoteService.delete_entry(_parser.DirPath, entry);
                 }
+                if(found == false)
+                    DeviceNoteService.delete_entry(_parser.DirPath, entry);
+            }
         }
 
         public void delete()
