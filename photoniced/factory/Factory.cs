@@ -10,15 +10,26 @@ using photoniced.essentials.ConsoleUnitWrapper;
 namespace photoniced.factory
 {
     public class Factory : IFactory
-    {
-        private static IConsole get_wrapper() => new ConsoleUnitWrapper();
-        public static IDeviceChanger create_device_changer() => new DeviceChanger(get_wrapper());
-        public static IDeviceSorter create_device_sorter() => new DeviceSorter(get_wrapper());
-        public static IDeviceReader create_device_reader() => new DeviceReader(get_wrapper());
-        public static Device create_device(ICommandLineParser parser,IDeviceReader reader, IDeviceSorter sorter, IDeviceChanger changer) 
-            => new Device(parser, reader, sorter, changer);
-        public static Menu create_menu(Device dev) => new Menu(dev);
+    { 
+        public Menu Menu { get; set; }
+        public Device Device { get; set; }
+        public ICommandLineParser CmdParser { get; set; }
+    
+        public Factory(string[] args)
+        {
+            var wrapper = create_wrapper();
+            CmdParser = create_cmd_parser(args);
+            Device = create_device(CmdParser, create_device_reader(wrapper), create_device_sorter(wrapper), create_device_changer(wrapper));
+            Menu = create_menu(Device);
+        }
 
-        public static CommandLineParser create_cmd_parser(string[] args) => new CommandLineParser(args);
+        private  IConsole create_wrapper() => new ConsoleUnitWrapper();
+        private  IDeviceChanger create_device_changer(IConsole wrapper) => new DeviceChanger(wrapper);
+        private  IDeviceSorter create_device_sorter(IConsole wrapper) => new DeviceSorter(wrapper);
+        private  IDeviceReader create_device_reader(IConsole wrapper) => new DeviceReader(wrapper);
+        private Device create_device(ICommandLineParser parser,IDeviceReader reader, IDeviceSorter sorter, IDeviceChanger changer) 
+            => new Device(parser, reader, sorter, changer);
+        private Menu create_menu(Device dev) => new Menu(dev);
+        private CommandLineParser create_cmd_parser(string[] args) => new CommandLineParser(args);
     }
 }
