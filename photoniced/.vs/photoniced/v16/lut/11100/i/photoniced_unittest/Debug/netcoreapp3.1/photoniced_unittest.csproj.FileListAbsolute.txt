@@ -1,0 +1,14 @@
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\photoniced.exe
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.deps.json
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.runtimeconfig.json
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.runtimeconfig.dev.json
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.csprojAssemblyReference.cache
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.AssemblyInfoInputs.cache
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.AssemblyInfo.cs
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.csproj.CopyComplete
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced_unittest\Debug\netcoreapp3.1\photoniced_unittest.genruntimeconfig.cache

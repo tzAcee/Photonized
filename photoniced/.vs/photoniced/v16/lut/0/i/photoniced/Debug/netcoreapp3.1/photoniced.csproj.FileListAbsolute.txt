@@ -1,0 +1,15 @@
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\photoniced.exe
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\photoniced.deps.json
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\photoniced.runtimeconfig.json
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\photoniced.runtimeconfig.dev.json
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\photoniced.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\CommandLine.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\ConsoleMenu.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\b\photoniced\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced\Debug\netcoreapp3.1\photoniced.csprojAssemblyReference.cache
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced\Debug\netcoreapp3.1\photoniced.AssemblyInfoInputs.cache
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced\Debug\netcoreapp3.1\photoniced.AssemblyInfo.cs
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced\Debug\netcoreapp3.1\photoniced.csproj.CopyComplete
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced\Debug\netcoreapp3.1\photoniced.dll
+F:\Projects\VS\C#\photonized\photoniced\.vs\photoniced\v16\lut\0\i\photoniced\Debug\netcoreapp3.1\photoniced.genruntimeconfig.cache

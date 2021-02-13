@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\FleeXo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\FleeXo\\.nuget\\packages"
+    ]
+  }
+}
