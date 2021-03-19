@@ -1,0 +1,9 @@
+@startuml
+class MenuViewTest {
+    + constructor_test() : void
+    + constructor_null_test() : void
+    + configure_test() : void
+    + build_test() : void
+    + show_test() : void
+}
+@enduml

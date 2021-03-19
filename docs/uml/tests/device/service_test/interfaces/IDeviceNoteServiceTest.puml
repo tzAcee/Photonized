@@ -1,0 +1,8 @@
+@startuml
+class IDeviceNoteServiceTest {
+    + get_file_path_test() : void
+    + add_entry_test() : void
+    + delete_entry_test() : void
+    + read_entries_test() : void
+}
+@enduml

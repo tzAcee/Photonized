@@ -1,0 +1,5 @@
+@startuml
+class CommandLineOptions {
+    + _Path : string <<get>> <<set>>
+}
+@enduml

@@ -1,0 +1,92 @@
+@startuml
+class RequiredTest {
+    + exception_test() : void
+    + success_test() : void
+    + type_test() : void
+}
+class DeviceChangerTest {
+    + set_parser_null_test() : void
+    + set_parser_valid_test() : void
+    + change_write_test() : void
+    + change_exception_test() : void
+}
+class DeviceReaderTest {
+    + set_parser_test() : void
+    + set_parser_valid_test() : void
+    + delete_null_test() : void
+    + read_call_structure_test() : void
+    + print_structure_simple_test() : void
+}
+class DeviceSorterTest {
+    + set_parser_test() : void
+    + get_user_entry_intro_test() : void
+    + get_user_entry_name_test() : void
+    + get_user_entry_description_test() : void
+    + get_user_entry_return_test() : void
+    + get_user_entry_split_null_test() : void
+    + sort() : void
+}
+class DeviceTest {
+    + constructor_parser_test() : void
+    + constructor_reader_test() : void
+    + constructor_sorter_test() : void
+    + constructor_changer_test() : void
+    + cmd_parser_dependency_test() : void
+    + init_reader_test() : void
+    + init_sorter_test() : void
+    + init_changer_test() : void
+    + read_test() : void
+    + sort_test() : void
+    + change_test() : void
+}
+class FactoryTest {
+    + constructor_parser_test() : void
+    + constructor_device_test() : void
+    + constructor_menu_test() : void
+}
+class MenuBuilderTest {
+    + get_args_test() : void
+    + get_lvl_test() : void
+    + get_methods_count_test() : void
+    + get_methods_not_null_test() : void
+}
+class MenuTest {
+    + constructor_exception_test() : void
+}
+class MenuViewTest {
+    + constructor_test() : void
+    + constructor_null_test() : void
+    + configure_test() : void
+    + build_test() : void
+    + show_test() : void
+}
+class DeviceNoteServiceTest {
+    + get_file_path_null_test() : void
+    + get_file_path_create_test() : void
+    + get_file_path_test() : void
+    + add_entry_test() : void
+    + delete_entry_test() : void
+    + read_entries_test() : void
+}
+class DevicePathServiceTest {
+    + path_valid_null_test() : void
+    + path_valid_true_test() : void
+    + get_file_exception_test() : void
+    + get_file_test() : void
+}
+class IMenuBuilderTest {
+    + get_lvl_test() : void
+    + get_args_test() : void
+    + get_methods_test() : void
+}
+class IDeviceNoteServiceTest {
+    + get_file_path_test() : void
+    + add_entry_test() : void
+    + delete_entry_test() : void
+    + read_entries_test() : void
+}
+class IDevicePathServiceTest {
+    + path_valid_test() : void
+    + get_file_test() : void
+}
+@enduml

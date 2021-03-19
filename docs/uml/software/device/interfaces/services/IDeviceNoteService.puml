@@ -1,0 +1,8 @@
+@startuml
+interface IDeviceNoteService {
+    + {static} get_file_path(path:string, create:bool) : string
+    + {static} add_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} delete_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} read_entries(path:string) : List<DeviceUserEntry>
+}
+@enduml

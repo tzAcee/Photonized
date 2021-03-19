@@ -1,0 +1,197 @@
+@startuml
+class Program {
+    {static} Main(args:string[]) : void
+}
+class Required <<static>> {
+    + {static} NotNull(value:T, name:string) : T
+}
+class Device {
+    + Device(parser:ICommandLineParser, deviceReader:IDeviceReader, deviceSorter:IDeviceSorter, deviceChanger:IDeviceChanger)
+    - init_modules() : void
+    + read() : void
+    + sort() : void
+    + change_device_path() : void
+    + delete() : void
+}
+Device --> "CmdParser" ICommandLineParser
+Device --> "_reader" IDeviceReader
+Device --> "_sorter" IDeviceSorter
+Device --> "_changer" IDeviceChanger
+class DeviceChanger {
+    + DeviceChanger(console:IConsole)
+    + set_parser(parser:ICommandLineParser) : void
+    + change() : void
+}
+IDeviceChanger <|-- DeviceChanger
+DeviceChanger --> "_parser" ICommandLineParser
+DeviceChanger --> "_Console" IConsole
+class DeviceReader {
+    + DeviceReader(console:IConsole)
+    + set_parser(parser:ICommandLineParser) : void
+    + read() : void
+    + print_structure() : void
+    + compare(entries:List<DeviceUserEntry>) : void
+    + delete() : void
+    + print_read_info() : void
+}
+IDeviceReader <|-- DeviceReader
+DeviceReader --> "_parser" ICommandLineParser
+DeviceReader --> "_Console" IConsole
+class DeviceSorter {
+    + DeviceSorter(console:IConsole)
+    + set_parser(parser:ICommandLineParser) : void
+    + get_user_entry() : DeviceUserEntry
+    + sort() : void
+}
+IDeviceSorter <|-- DeviceSorter
+DeviceSorter --> "_parser" ICommandLineParser
+DeviceSorter --> "_Console" IConsole
+class Factory {
+    + Factory(args:string[])
+    - create_wrapper() : IConsole
+    - create_device_changer(wrapper:IConsole) : IDeviceChanger
+    - create_device_sorter(wrapper:IConsole) : IDeviceSorter
+    - create_device_reader(wrapper:IConsole) : IDeviceReader
+    - create_device(parser:ICommandLineParser, reader:IDeviceReader, sorter:IDeviceSorter, changer:IDeviceChanger) : Device
+    - create_menu(dev:Device) : Menu
+    - create_cmd_parser(args:string[]) : CommandLineParser
+}
+IFactory <|-- Factory
+Factory --> "Menu" Menu
+Factory --> "Device" Device
+Factory --> "CmdParser" ICommandLineParser
+class Menu {
+    + Menu(dev:Device)
+    - create_menu_view(args:string[], level:int, methods:List<MethodsHolder>, start_path:string) : MenuView
+}
+Menu --> "_menuView" IMenuView
+class MenuBuilder {
+    + {static} get_args() : string[]
+    + {static} get_lvl() : int
+    + {static} get_methods(dev:Device) : List<MethodsHolder>
+}
+IMenuBuilder <|-- MenuBuilder
+class MenuView {
+    - _path : string
+    + MenuView(args:string[], level:int, mh:List<MethodsHolder>, start_path:string)
+    + configure() : void
+    + build() : void
+    + show() : void
+    + render() : void
+}
+class "List`1"<T> {
+}
+ConsoleMenu <|-- MenuView
+IMenuView <|-- MenuView
+MenuView --> "_methods<MethodsHolder>" "List`1"
+interface IDeviceChanger {
+    + set_parser(parser:ICommandLineParser) : void
+    + change() : void
+}
+interface IDeviceReader {
+    + set_parser(parser:ICommandLineParser) : void
+    + print_structure() : void
+    + print_read_info() : void
+    + delete() : void
+    + compare(entries:List<DeviceUserEntry>) : void
+    + read() : void
+}
+interface IDeviceSorter {
+    + set_parser(parser:ICommandLineParser) : void
+    + sort() : void
+    + get_user_entry() : DeviceUserEntry
+}
+class DeviceNoteService {
+    - <<const>> InfoFileName : string = ".photon.json"
+    + {static} get_file_path(path:string, create:bool) : string
+    + {static} exclude_directory_delete(path:string, sort_word:string) : void
+    + {static} delete_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} add_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} read_entries(path:string) : List<DeviceUserEntry>
+}
+IDeviceNoteService <|-- DeviceNoteService
+class DevicePathService {
+    + {static} path_valid(path:string) : bool
+    + {static} get_file(path:string) : FileInfo
+}
+IDevicePathService <|-- DevicePathService
+class CommandLineOptions {
+    + _Path : string <<get>> <<set>>
+}
+class CommandLineParser {
+    + DirPath : string <<get>> <<set>>
+    + CommandLineParser(args:string[])
+    - default_path() : string
+    + parse(args:string[]) : void
+}
+ICommandLineParser <|-- CommandLineParser
+class ConsoleUnitWrapper {
+    + Write(message:string) : void
+    + WriteLine(message:string) : void
+    + ReadLine() : string
+    + Clear() : void
+}
+IConsole <|-- ConsoleUnitWrapper
+interface IConsole {
+    Write(message:string) : void
+    WriteLine(message:string) : void
+    Clear() : void
+    ReadLine() : string
+}
+interface INodePrinter {
+    + {static} print_tree(tree:Node, indent:string, last:bool) : void
+}
+class Node {
+    + Name : string <<get>> <<set>>
+    + Node(path:string)
+    get_children(path:string) : void
+}
+class "List`1"<T> {
+}
+Node --> "Children<Node>" "List`1"
+class NodePrinter {
+    + {static} print_tree(tree:Node, indent:string, last:bool) : void
+}
+INodePrinter <|-- NodePrinter
+class DeviceUserEntry <<struct>> {
+    + DeviceUserEntry(name:string, desc:string, time:DateTime)
+    + SortWord : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+}
+DeviceUserEntry --> "SortTime" DateTime
+class MethodsHolder <<struct>> {
+    + MethodsHolder(method:Action, description:string)
+    + _description : string <<get>>
+}
+MethodsHolder --> "_method" Action
+interface IFactory {
+}
+IFactory --> "Menu" Menu
+IFactory --> "CmdParser" ICommandLineParser
+IFactory --> "Device" Device
+interface IMenuBuilder {
+    {static} get_methods(dev:Device) : List<MethodsHolder>
+    {static} get_args() : string []
+    {static} get_lvl() : int
+}
+interface IMenuView {
+    configure() : void
+    build() : void
+    show() : void
+    render() : void
+}
+interface IDeviceNoteService {
+    + {static} get_file_path(path:string, create:bool) : string
+    + {static} add_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} delete_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} read_entries(path:string) : List<DeviceUserEntry>
+}
+interface IDevicePathService {
+    {static} path_valid(path:string) : bool
+    {static} get_file(path:string) : FileInfo
+}
+interface ICommandLineParser {
+    DirPath : string <<get>> <<set>>
+    parse(path:string[]) : void
+}
+@enduml

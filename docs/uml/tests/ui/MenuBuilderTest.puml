@@ -1,0 +1,8 @@
+@startuml
+class MenuBuilderTest {
+    + get_args_test() : void
+    + get_lvl_test() : void
+    + get_methods_count_test() : void
+    + get_methods_not_null_test() : void
+}
+@enduml

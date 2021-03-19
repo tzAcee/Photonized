@@ -1,0 +1,7 @@
+@startuml
+class Menu {
+    + Menu(dev:Device)
+    - create_menu_view(args:string[], level:int, methods:List<MethodsHolder>, start_path:string) : MenuView
+}
+Menu --> "_menuView" IMenuView
+@enduml

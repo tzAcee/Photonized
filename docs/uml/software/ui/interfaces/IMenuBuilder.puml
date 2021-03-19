@@ -1,0 +1,7 @@
+@startuml
+interface IMenuBuilder {
+    {static} get_methods(dev:Device) : List<MethodsHolder>
+    {static} get_args() : string []
+    {static} get_lvl() : int
+}
+@enduml

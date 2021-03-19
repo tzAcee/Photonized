@@ -1,0 +1,15 @@
+@startuml
+class DeviceTest {
+    + constructor_parser_test() : void
+    + constructor_reader_test() : void
+    + constructor_sorter_test() : void
+    + constructor_changer_test() : void
+    + cmd_parser_dependency_test() : void
+    + init_reader_test() : void
+    + init_sorter_test() : void
+    + init_changer_test() : void
+    + read_test() : void
+    + sort_test() : void
+    + change_test() : void
+}
+@enduml

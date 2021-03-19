@@ -1,0 +1,7 @@
+@startuml
+class FactoryTest {
+    + constructor_parser_test() : void
+    + constructor_device_test() : void
+    + constructor_menu_test() : void
+}
+@enduml

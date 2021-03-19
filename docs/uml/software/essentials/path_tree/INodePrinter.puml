@@ -1,0 +1,5 @@
+@startuml
+interface INodePrinter {
+    + {static} print_tree(tree:Node, indent:string, last:bool) : void
+}
+@enduml

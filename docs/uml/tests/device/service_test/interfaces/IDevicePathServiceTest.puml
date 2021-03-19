@@ -1,0 +1,6 @@
+@startuml
+class IDevicePathServiceTest {
+    + path_valid_test() : void
+    + get_file_test() : void
+}
+@enduml

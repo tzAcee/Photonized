@@ -1,0 +1,9 @@
+@startuml
+class DeviceReaderTest {
+    + set_parser_test() : void
+    + set_parser_valid_test() : void
+    + delete_null_test() : void
+    + read_call_structure_test() : void
+    + print_structure_simple_test() : void
+}
+@enduml

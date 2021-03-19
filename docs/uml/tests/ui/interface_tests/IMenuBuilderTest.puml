@@ -1,0 +1,7 @@
+@startuml
+class IMenuBuilderTest {
+    + get_lvl_test() : void
+    + get_args_test() : void
+    + get_methods_test() : void
+}
+@enduml

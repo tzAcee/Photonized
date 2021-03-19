@@ -1,0 +1,7 @@
+@startuml
+class DevicePathService {
+    + {static} path_valid(path:string) : bool
+    + {static} get_file(path:string) : FileInfo
+}
+IDevicePathService <|-- DevicePathService
+@enduml

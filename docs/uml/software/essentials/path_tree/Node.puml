@@ -1,0 +1,10 @@
+@startuml
+class Node {
+    + Name : string <<get>> <<set>>
+    + Node(path:string)
+    get_children(path:string) : void
+}
+class "List`1"<T> {
+}
+Node --> "Children<Node>" "List`1"
+@enduml

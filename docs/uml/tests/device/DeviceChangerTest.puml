@@ -1,0 +1,8 @@
+@startuml
+class DeviceChangerTest {
+    + set_parser_null_test() : void
+    + set_parser_valid_test() : void
+    + change_write_test() : void
+    + change_exception_test() : void
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class RequiredTest {
+    + exception_test() : void
+    + success_test() : void
+    + type_test() : void
+}
+@enduml

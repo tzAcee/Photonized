@@ -1,0 +1,10 @@
+@startuml
+interface IDeviceReader {
+    + set_parser(parser:ICommandLineParser) : void
+    + print_structure() : void
+    + print_read_info() : void
+    + delete() : void
+    + compare(entries:List<DeviceUserEntry>) : void
+    + read() : void
+}
+@enduml

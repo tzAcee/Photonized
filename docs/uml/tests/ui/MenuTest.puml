@@ -1,0 +1,5 @@
+@startuml
+class MenuTest {
+    + constructor_exception_test() : void
+}
+@enduml

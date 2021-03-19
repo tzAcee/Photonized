@@ -1,0 +1,11 @@
+@startuml
+class DeviceSorterTest {
+    + set_parser_test() : void
+    + get_user_entry_intro_test() : void
+    + get_user_entry_name_test() : void
+    + get_user_entry_description_test() : void
+    + get_user_entry_return_test() : void
+    + get_user_entry_split_null_test() : void
+    + sort() : void
+}
+@enduml

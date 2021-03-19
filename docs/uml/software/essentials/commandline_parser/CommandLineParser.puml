@@ -1,0 +1,9 @@
+@startuml
+class CommandLineParser {
+    + DirPath : string <<get>> <<set>>
+    + CommandLineParser(args:string[])
+    - default_path() : string
+    + parse(args:string[]) : void
+}
+ICommandLineParser <|-- CommandLineParser
+@enduml
