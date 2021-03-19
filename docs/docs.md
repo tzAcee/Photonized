@@ -69,7 +69,7 @@ Als nächstes kann die Anwendung über `dotnet run` gestartet werden (über dies
 ## Unit Testing
 Unit Testing war ein essentieller Part während des Programmsentwurfs. Wie oben schon erwähnt wurde MSTest zum Testen und Moq zum Mocken verwendet.
 Die Test- sowie Codecoverage ist aus dem nächsten Bild zu entnehmen.
-![Test und Codecoverage](/assets/test_cover.png)
+![Test und Codecoverage](assets/test_cover.png)
 
 Wie man sieht sind noch nicht alle Tests implementiert, jedoch würde dies ebenfalls die Codezeilengrenze überschreiten. Denn es wurde zum Beispiel ein Console Wrapper (um die Konsole "mockbar" zu machen) geschrieben, jedoch kein Wrapper für die "File" Klasse von C#. Die Console Wrapper Klasse ist nebenbei unter [Refactoring](#refactoring) zu finden.
 
