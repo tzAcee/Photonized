@@ -49,7 +49,8 @@ namespace photoniced.device.services
                 }
                 catch(Exception e)
                 {
-                    File.Delete(entry); // either auth exception or double file exception -> so delete (which follows another exception, when auth)
+                    File.Delete(entry); // either auth exception or double file exception -> 
+                                        // so delete (which follows another exception, when auth)
                     continue;
                 }
             }

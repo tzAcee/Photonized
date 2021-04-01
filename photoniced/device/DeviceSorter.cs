@@ -18,6 +18,8 @@ namespace photoniced.device
 
         private IConsole _Console;
 
+        private const int DEFAULT_SPLIT = 3;
+
         public DeviceSorter(IConsole console)
         {
             _Console = Required.NotNull(console, nameof(console));
@@ -33,7 +35,7 @@ namespace photoniced.device
             _Console.WriteLine("For which day you want to sort the pictures? (DD/MM/YYYY)");
             string date = _Console.ReadLine();
             var dateSplitted = date.Split('/');
-            if (dateSplitted.Length != 3)
+            if (dateSplitted.Length != DEFAULT_SPLIT)
             {
                 //return new DeviceUserEntry();
                 throw new InvalidDataException();
