@@ -1,5 +1,5 @@
 # Dokumentation: Photonized
-  - [Was ist Photoniced?](#was-ist-photoniced)
+  - [Was ist Photonized?](#was-ist-photoniced)
   - [Wie lasse ich die Software laufen?](#wie-lasse-ich-die-software-laufen)
 	- [Startparameter](#params)
   - [Frameworks](#frameworks)
@@ -12,8 +12,8 @@
   - [TODO](#todo)
 
 <a name="what"></a>
-## Was ist Photoniced?
-Photoniced ist eine Software, welche im Zuge eines Programmentwurfs für die TINF18B4 Advanced Software Engineering Vorlesung entwickelt wurde.
+## Was ist Photonized?
+Photonized ist eine Software, welche im Zuge eines Programmentwurfs für die TINF18B4 Advanced Software Engineering Vorlesung entwickelt wurde.
 Die Anwendung dient dazu, Bilder in selbst festgelegte Ordner zu sortieren.
 Durch eine minimalistische Darstellung, basierender auf einer Konsolenanwendung, ist die Handhabung sehr durchsichtig.
 
