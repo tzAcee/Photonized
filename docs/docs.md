@@ -121,8 +121,35 @@ Die Deviceklasse bildet das Agregat Muster. Wenn man ein Device anfordert, wird 
 ## Refactoring
 Zunächst wurde eine Refactoring für das Unit Testing betrieben, denn in C# kann man die Console Klasse nicht direkt testen. Man muss diese zunächst Wrappen und innerhalb der Unit Tests mocken.
 
-%TODO
 
+Um Code-Smells richtig zu analysieren wurde eine Visual Studio Extension, namens Designite benutzt. Diese bietet einen Haufen an Details über den geschrieben Code und zeigt unter Anderem auch die erkannten Code-Smells an. In dem Fall wird sich auch nur auf diese Smells fokusiert:
+
+![](assets/smell1.PNG) | ![](assets/smell2.PNG) |![](assets/smell3.PNG)
+
+
+So sieht die Übersicht nach einer Projektanalyse aus. Logischerweise sind im Unit-Testing Projekt mehr Smells, da diese mehr oder weniger einer bestimmten Struktur folgen und zum Teil auch auto-generiert sind.
+
+Als Beispiel wird hier nur das Refactoring der Implementation-Smells behandelt. Andere Smells wurden intern gelöst.
+Der erste Schritt ist die beiden Magic Numbers aufzulösen. Hier ein Beispiel aus dem DeviceSorter:
+
+
+```
+Magic Number: 
+The smell arises when a potentially unexplained literal is used in an expression.
+The following statement contains a magic number:
+dateSplitted.Length != 3
+```
+Das Ganze lässt sich einfach durch eine konstante Variable lösen.
+
+Ein anderer Smell ist das Long-Statment:
+```
+Long Statement: 
+The smell arises when a statement is long.
+The length of the statement 
+"                    File.Delete(entry); // either auth exception or double file exception -> so delete (which follows another exception, when auth)
+" is 127.
+```
+Das lässt sich auflösen indem, man den Kommentar mehrzeilig macht.
 <a name="princ"></a>
 ## Programming Principles
 #### KISS
