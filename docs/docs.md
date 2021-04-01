@@ -139,7 +139,7 @@ The smell arises when a potentially unexplained literal is used in an expression
 The following statement contains a magic number:
 dateSplitted.Length != 3
 ```
-Das Ganze lässt sich einfach durch eine konstante Variable lösen.
+Das Ganze lässt sich einfach durch eine konstante Variable lösen. Der Sinn diesen Smell aufzulösen ist, dass Magic Numbers von Leuten, die den Code nicht kennen, nicht ohne weiteres gedeutet werden können und nicht verstehen können, wieso nun genau diese Nummer da steht. Weshalb Hintergrundwissen durch einen Variablen Namen helfen kann.
 
 Ein anderer Smell ist das Long-Statment:
 ```
@@ -149,7 +149,7 @@ The length of the statement
 "                    File.Delete(entry); // either auth exception or double file exception -> so delete (which follows another exception, when auth)
 " is 127.
 ```
-Das lässt sich auflösen indem, man den Kommentar mehrzeilig macht.
+Das lässt sich auflösen indem, man den Kommentar mehrzeilig macht. Diesen Smell aufzulösen macht vorallem wegen der Übersichtlichkeit und der Lesbarkeit des Codes Sinn. Denn man will ohne weiteres Scrollen Inhalte des Codes lesen können.
 <a name="princ"></a>
 ## Programming Principles
 #### KISS
@@ -175,7 +175,7 @@ Nachdem eine richtige Factory umgesetzt wurde, konnte diese endlich richtig verw
 ![New Factory Content](assets/fac_new1.png)
 ![New Factory Usage](assets/fac_new2.png)
 
-Der Zweck der Factory ist, dass man 
+Der Zweck der Factory ist, dass man innerhalb von Klassen keine `new`-Keywords hat. Sondern eben nur in der Factory. Das hilft Inkosistenzen durch doppelte Objekte zu vermeiden. 
 
 <a name="todo"></a>
 ## TODO
