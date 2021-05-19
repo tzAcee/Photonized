@@ -1,5 +1,5 @@
 # Dokumentation: Photonized
-  - [Was ist Photoniced?](#was-ist-photoniced)
+  - [Was ist Photonized?](#was-ist-photoniced)
   - [Wie lasse ich die Software laufen?](#wie-lasse-ich-die-software-laufen)
 	- [Startparameter](#params)
   - [Frameworks](#frameworks)
@@ -11,13 +11,13 @@
   - [Entwurfsmuster](#entwurfsmuster)
 
 <a name="what"></a>
-## Was ist Photoniced?
-Photoniced ist eine Software, welche im Zuge eines Programmentwurfs für die TINF18B4 Advanced Software Engineering Vorlesung entwickelt wurde.
+## Was ist Photonized?
+Photonized ist eine Software, welche im Zuge eines Programmentwurfs für die TINF18B4 Advanced Software Engineering Vorlesung entwickelt wurde.
 Die Anwendung dient dazu, Bilder in selbst festgelegte Ordner zu sortieren.
 Durch eine minimalistische Darstellung, basierender auf einer Konsolenanwendung, ist die Handhabung sehr durchsichtig.
 
 
-Die Ordner werden relativ zum Ortspfad der Anwendung erstellt. Das heißt: Wird photoniced in "/home/test/" ausgeführt, werden auch die Ordner in "/home/test/*" erstellt. Dieser Pfad kann entweder über einen [Startparameter](#params) oder direkt in der Anwendung ("Change Device Path") verändert werden. Der derzeitige Device Pfad wird im Titel der Konsolenanwendung angezeigt.
+Die Ordner werden relativ zum Ortspfad der Anwendung erstellt. Das heißt: Wird photonized in "/home/test/" ausgeführt, werden auch die Ordner in "/home/test/*" erstellt. Dieser Pfad kann entweder über einen [Startparameter](#params) oder direkt in der Anwendung ("Change Device Path") verändert werden. Der derzeitige Device Pfad wird im Titel der Konsolenanwendung angezeigt.
 
 Um nun Bilder zu sortieren, muss zunächst "Sort Device" angewählt werden. Man wird direkt aufgefordert ein Datum anzugeben, an dem die Fotos, die man sortieren möchte, erstellt wurden. Dies ist auch das **Sortierkriterium**. Bei ungültigem Format wird ein Fehler geworfen.
 Sobald man ein Datum festgelegt hat, soll man ein Schlagwort (Im Optimalfall ein Ereignis) angeben, welches den Tag zusammenfasst. Zum Beispiel, wenn man nach Urlaubsereignissen sortiert, wäre "Sightseeing" ein Schlagwort.
