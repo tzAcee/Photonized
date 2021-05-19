@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using photoniced.common;
 using photoniced.device.interfaces;
+using photoniced.device.interfaces.repos;
+using photoniced.device.repos;
 using photoniced.device.services;
 using photoniced.essentials;
 using photoniced.essentials.commandline_parser.interfaces;
@@ -14,6 +16,7 @@ namespace photoniced.device
     public class DeviceReader : IDeviceReader
     {
         private ICommandLineParser _parser;
+        private IDeviceReaderRepository _repo = new DeviceReaderRepository();
         private IConsole _Console;
         public DeviceReader(IConsole console)
         {
@@ -63,7 +66,7 @@ namespace photoniced.device
 
         public void delete()
         {
-            var entries = DeviceNoteService.read_entries(_parser.DirPath);
+            var entries = _repo.read_entries(_parser.DirPath);
             if (entries == null)
             {
                 _Console.WriteLine("No Entries found.");
@@ -112,7 +115,7 @@ namespace photoniced.device
 
         public void print_read_info()
         {
-            var entries = DeviceNoteService.read_entries(_parser.DirPath);
+            var entries = _repo.read_entries(_parser.DirPath);
             if (entries == null)
             {
                 _Console.ReadLine();

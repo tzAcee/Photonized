@@ -85,7 +85,7 @@ namespace photoniced.device.services
             
         }
 
-        public static List<DeviceUserEntry> read_entries(string path)
+      /*  public static List<DeviceUserEntry> read_entries(string path)
         {
             string filePath = get_file_path(path, false);
             if (filePath == null)
@@ -109,6 +109,6 @@ namespace photoniced.device.services
                 jsonListFile = new List<DeviceUserEntry>();
             
             return jsonListFile;
-        }
+        }*/
     }
 }
