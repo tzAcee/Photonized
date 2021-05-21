@@ -214,11 +214,13 @@ Der Zweck der Factory ist, dass man innerhalb von Klassen keine `new`-Keywords h
 ##### Interpreter Pattern
 Zusätzlich wurde noch das Interpreter Pattern genutzt. Dieses findet normalerweise Einsatz in Compilerprojekten. Jedoch hilft es hier enorm viel, die User-Eingabe, die bspw. im Device Sorter gebraucht wird, aus dem Device Sorter zu entkoppeln. Wodurch die Struktur einfach klarer wird.
 Das Pattern besteht aus Context, sowie Expression. In der Expression wird interpretiert und das grobe Ziel ist es quasi, Befehle des Nutzers abzufangen, zu validieren und zum Schluss für das Device zu interpretieren. 
+
 Vorher:
 
 ![Before Interpreter](assets/interpreterpatternBefore.png)
 
 Dannach:
+
 ![With Interpreter](assets/interpreterpatternAfter.png)
 ![Expression of Interpreter](assets/expressionafter.png)
 
