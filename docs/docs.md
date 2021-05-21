@@ -68,7 +68,8 @@ Als nächstes kann die Anwendung über `dotnet run` gestartet werden (über dies
 ## Unit Testing
 Unit Testing war ein essentieller Part während des Programmsentwurfs. Wie oben schon erwähnt wurde MSTest zum Testen und Moq zum Mocken verwendet.
 Die Test- sowie Codecoverage ist aus dem nächsten Bild zu entnehmen.
-![Test und Codecoverage](assets/test_cover.png)
+
+![Test und Codecoverage](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/test_cover.png)
 
 Wie man sieht sind noch nicht alle Tests implementiert, jedoch würde dies ebenfalls die Codezeilengrenze überschreiten. Denn es wurde zum Beispiel ein Console Wrapper (um die Konsole "mockbar" zu machen) geschrieben, jedoch kein Wrapper für die "File" Klasse von C#. Die Console Wrapper Klasse ist nebenbei unter [Refactoring](#refactoring) zu finden.
 
@@ -89,7 +90,7 @@ Um einen Funktionsaufruf zu überprüfen, muss man entweder direkt `Verify` aufr
 
             console.VerifyAll();
 ```
-![Test UML (Zeigt die Isolation)](uml/tests/uml_tests.png)
+![Test UML (Zeigt die Isolation)](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/uml/tests/uml_tests.png)
 
 <a name="clean"></a>
 ## Clean Architecture
@@ -104,7 +105,7 @@ Die Präsentationsschicht ist, wie die Adaptersschicht im Modul `ui` zu finden u
 
 Jede Schicht wird in der `Factory` bereitgestellt.
 
-![UML Diagramm der Software](uml/software/softwareuml.svg)
+![UML Diagramm der Software](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/uml/software/softwareuml.svg)
 [In Github öffnen](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/uml/software/softwareuml.svg)
 
 <a name="DDD"></a>
@@ -156,7 +157,7 @@ Zunächst wurde eine Refactoring für das Unit Testing betrieben, denn in C# kan
 
 Um Code-Smells richtig zu analysieren wurde eine Visual Studio Extension, namens Designite benutzt. Diese bietet einen Haufen an Details über den geschrieben Code und zeigt unter Anderem auch die erkannten Code-Smells an. In dem Fall wird sich auch nur auf diese Smells fokusiert:
 
-![](assets/smell1.PNG) | ![](assets/smell2.PNG) |![](assets/smell3.PNG)
+![](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/smell1.PNG) | ![](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/smell2.PNG) |![](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/smell3.PNG)
 
 
 So sieht die Übersicht nach einer Projektanalyse aus. Logischerweise sind im Unit-Testing Projekt mehr Smells, da diese mehr oder weniger einer bestimmten Struktur folgen und zum Teil auch auto-generiert sind.
@@ -203,32 +204,35 @@ Durch die Factory Lösung und die klare Schichtarchitektur, kann jedes einzelne 
 ## Entwurfsmuster
 ##### Factory
 Von Beginn an war geplant eine Factory zu verwenden. Jedoch erstmal nur experimentell, wie es in folgendem Bild zu sehen ist. Es werden ständig neue Objekte erzeugt, was logischerweise zu inkosistenzen führen kann.
-![Old Factory Content](assets/fac_old1.png)
-![Old Factory Usage](assets/fac_old2.png)
+
+![Old Factory Content](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/fac_old1.png)
+![Old Factory Usage](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/fac_old2.png)
 
 Nachdem eine richtige Factory umgesetzt wurde, konnte diese endlich richtig verwendet werden.
-![New Factory Content](assets/fac_new1.png)
-![New Factory Usage](assets/fac_new2.png)
 
-Der Zweck der Factory ist, dass man innerhalb von Klassen keine `new`-Keywords hat. Sondern eben nur in der Factory. Das hilft Inkosistenzen durch doppelte Objekte zu vermeiden. Die logischen Folgen einer Factory sind, die Erweiterbarkeit und die Testbarkeit, was auch der Grund dafür ist, wieso von Anfang an eine genutzt wurde.
+![New Factory Content](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/fac_new1.png)
+![New Factory Usage](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/fac_new2.png)
+
+Der Zweck der Factory ist, dass man innerhalb von Klassen keine `new`-Keywords hat. Sondern eben nur in der Factory. Das hilft Inkosistenzen durch doppelte Objekte zu vermeiden. Die logischen Folgen der Factory sind, die Erweiterbarkeit und die Testbarkeit der Komponenten, was auch der Grund dafür ist, wieso von Anfang an eine genutzt wurde. Außerdem kann man dadurch sehr konsistent auf die einzelnen Objekte zugreifen ohne Inkonsistenzen zu erzeugen. D.h. die Factory fördert ebenfalls die Wiederverwendbarkeit der zu produzierenden Objekte.
 ##### Interpreter Pattern
 Zusätzlich wurde noch das Interpreter Pattern genutzt. Dieses findet normalerweise Einsatz in Compilerprojekten. Jedoch hilft es hier enorm viel, die User-Eingabe, die bspw. im Device Sorter gebraucht wird, aus dem Device Sorter zu entkoppeln. Wodurch die Struktur einfach klarer wird.
 Das Pattern besteht aus Context, sowie Expression. In der Expression wird interpretiert und das grobe Ziel ist es quasi, Befehle des Nutzers abzufangen, zu validieren und zum Schluss für das Device zu interpretieren. 
 
 Vorher:
 
-![Before Interpreter](assets/interpreterpatternBefore.png)
+![Before Interpreter](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/interpreterpatternBefore.png)
 
 Mit Interpreter:
 
-![With Interpreter](assets/interpreterpatternAfter.png)
-![Expression of Interpreter](assets/expressionafter.png)
+![With Interpreter](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/interpreterpatternAfter.png)
+![Expression of Interpreter](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/expressionafter.png)
 
 Im Vergleich sieht man, dass die get_user_entry() Funktion aus dem DeviceSorter verschwindet und sowohl ein Context, als auch eine Expression entsteht. Diese werden im Interpreterpattern in einem Service (UserInputService) benutzt, der vom Sorter statisch aufgerufen wird. Eine Expression-Interface besteht stets aus einem Interpreter, welches als Methode implementiert ist. In dem Fall wurde nur die MoveFilesExpression eingebaut. Zusätzliche Nutzerinteraktion kann nun über weitere Expressions hinzugefügt werden.
 Die Vorteile dieses Musters sind ganz klar die Erweiterbarkeit, die durch die Expressions gegeben ist, die einfache Testbarkeit und die Loskopplung von Logik und Nutzerinteraktion.
 ##### Visitor Pattern
 Dieses Muster soll nicht zwingend betrachtet werden. Die Grundstruktur wurde zwar implementiert, aber noch noch nicht in die Anwendung eingebaut, da dies die gesamte Architektur der Submodule verwerfen würde und somit alles von vorne geschrieben werden musste. Im UML sieht die Struktur des Visitor Patterns aber so aus:
-![Visitor Struktur](assets/visitor.png)
+
+![Visitor Struktur](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/visitor.png)
 
 Dieses Muster würde, sofern richtig eingebaut, eine bessere Testbarkeit, Wiederverwendbarkeit und Erweiterbarkeit bringen, da die Funktionalität des Programms über weitere DataProcessor erweitern werden könnte, die einzeln ideal getestet werden könnten.
 
