@@ -94,8 +94,10 @@ Um einen Funktionsaufruf zu überprüfen, muss man entweder direkt `Verify` aufr
 
 <a name="clean"></a>
 ## Clean Architecture
-Die Software besteht, um es zusammenfassen, aus drei Schichten.
-Einer Präsentationsschicht (hier Plugins), einer Vorbereitungsschicht (Adapters) und einer logischen Schicht (in dem Fall Domain Code).
+Die Planung der Architektur ist sehr nutzerorientiert. Das heißt, dass der Nutzer unter Anderem nichts von der Logik des Programms mitbekommt, diese nicht verändern und beeinflussen kann. Er wählt nur die ihm gegebenen und für ihn zugägnglichen Funktionen aus, die dann von einer inneren Schicht abgearbeitet werden müssen. Dadurch ergeben sich schonmal mindestens zwei Schichten. Einer versteckten, logischen Schicht, die Aufgaben für z.B. den Nutzer erledigt und einer Schicht, die für den Nutzer vollkommen sichtbar und verwendbar ist - eine Präsentationsschicht. Da vom Programm irgendwie, die Menuführung mit Leben befüllt werden muss (Funktion oder Daten), gibt es noch eine zusätzliche Verarbeitungsschicht.
+
+Die Software besteht, also um es zusammenfassen, aus drei Schichten.
+Einer Präsentationsschicht (hier Plugins), einer Vorbereitungsschicht (Adapters) und einer logischen Schicht (in dem Fall Domain Code). Diese werden im folgenden von innen nach außen erläutert.
 Die Logikschicht ist im Modul `device` zu finden und ist dafür zuständig auf die Festplatte zuzugreifen, die Daten zu verwalten und später auch an die "View" zu übergeben. Dort sind die meisten Business Objects vorzufinden, sowie die allgemeine Logik implementiert. Diese ist bis auf den Ort unveränderlich. Dort sind die hauptsächlichen Regeln festgelegt, wie beispielsweise, wie ein Sortiereintrag auszusehen hat (durch den DeviceUserEntry, sowie die zugrundeliegenden Submodelle). Durch diese Abkopplung bleibt dem Nutzer diese Schicht verborgen. Hier findet die meiste Logik und die Kernfunktionalität statt, das hat den Sinn, dass der Nutzer am Ende nur die Funktionen nutzen kann, die ihm auch zur Verfügung stehen sollten. Die Funktionen der innersten Schicht können problemlos an die äußerste Schicht weitergereicht werden, was für dieses Argument enorm wichtig ist.
 
 Die Trennung der Adapters, sowie der Plugins ist nicht ganz klar, weshalb die Erläuterung hier notwendig ist.
@@ -230,10 +232,11 @@ Mit Interpreter:
 Im Vergleich sieht man, dass die get_user_entry() Funktion aus dem DeviceSorter verschwindet und sowohl ein Context, als auch eine Expression entsteht. Diese werden im Interpreterpattern in einem Service (UserInputService) benutzt, der vom Sorter statisch aufgerufen wird. Eine Expression-Interface besteht stets aus einem Interpreter, welches als Methode implementiert ist. In dem Fall wurde nur die MoveFilesExpression eingebaut. Zusätzliche Nutzerinteraktion kann nun über weitere Expressions hinzugefügt werden.
 Die Vorteile dieses Musters sind ganz klar die Erweiterbarkeit, die durch die Expressions gegeben ist, die einfache Testbarkeit und die Loskopplung von Logik und Nutzerinteraktion.
 ##### Visitor Pattern
-Dieses Muster soll nicht zwingend betrachtet werden. Die Grundstruktur wurde zwar implementiert, aber noch noch nicht in die Anwendung eingebaut, da dies die gesamte Architektur der Submodule verwerfen würde und somit alles von vorne geschrieben werden musste. Im UML sieht die Struktur des Visitor Patterns aber so aus:
+Dieses Muster soll nicht zwingend betrachtet werden. Die Grundstruktur wurde zwar implementiert, aber noch noch nicht in die Anwendung eingebaut, da dies die gesamte Architektur der Submodule verwerfen würde und somit alles von vorne geschrieben werden müsste. Im UML sieht die Struktur des Visitor Patterns aber so aus:
 
 ![Visitor Struktur](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/visitor.png)
 
+Der DataProcessor bzw. in dem Fall der MoveByCreationDate (Processor) würde den gesamten DeviceSorter ersetzten. Das müsste man sowohl für den Reader als auch für den Sorter noch implementieren, um diese dann ersetzen zu können.
 Dieses Muster würde, sofern richtig eingebaut, eine bessere Testbarkeit, Wiederverwendbarkeit und Erweiterbarkeit bringen, da die Funktionalität des Programms über weitere DataProcessor erweitern werden könnte, die einzeln ideal getestet werden könnten.
 
 
