@@ -219,7 +219,7 @@ Vorher:
 
 ![Before Interpreter](assets/interpreterpatternBefore.png)
 
-Dannach:
+Mit Interpreter:
 
 ![With Interpreter](assets/interpreterpatternAfter.png)
 ![Expression of Interpreter](assets/expressionafter.png)
