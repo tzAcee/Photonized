@@ -1,0 +1,6 @@
+@startuml
+class DeviceReaderRepository {
+    + read_entries(path:string) : List<DeviceUserEntry>
+}
+IDeviceReaderRepository <|-- DeviceReaderRepository
+@enduml

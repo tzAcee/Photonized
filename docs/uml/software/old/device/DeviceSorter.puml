@@ -1,0 +1,11 @@
+@startuml
+class DeviceSorter {
+    + DeviceSorter(console:IConsole)
+    + set_parser(parser:ICommandLineParser) : void
+    + get_user_entry() : DeviceUserEntry
+    + sort() : void
+}
+IDeviceSorter <|-- DeviceSorter
+DeviceSorter --> "_parser" ICommandLineParser
+DeviceSorter --> "_Console" IConsole
+@enduml

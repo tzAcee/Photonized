@@ -1,0 +1,32 @@
+@startuml
+interface IVisitorElement {
+    Accept(visitor:IVisitor) : void
+}
+interface IVisitor {
+    Visit(element:IVisitorElement) : void
+}
+interface IFolder {
+    Name : string <<get>> <<set>>
+    Path : string <<get>>
+}
+interface IFile {
+    Name : string <<get>> <<set>>
+    Path : string <<get>>
+    + Size : long <<get>>
+}
+interface IDataProcessor {
+    Visit(element:IFolder) : void
+    Visit(element:IFile) : void
+}
+class "IEnumerable`1"<T> {
+}
+IVisitorElement <|-- IFolder
+IFolder --> "Parent" IFolder
+IFolder --> "Files<IFile>" "IEnumerable`1"
+IFolder --> "Folders<IFolder>" "IEnumerable`1"
+IVisitorElement <|-- IFile
+IFile --> "Parent" IFolder
+IFile --> "Created" DateTime
+IFile --> "Changed" DateTime
+IVisitor <|-- IDataProcessor
+@enduml

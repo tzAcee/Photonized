@@ -1,0 +1,10 @@
+@startuml
+class DeviceChanger {
+    + DeviceChanger(console:IConsole)
+    + set_parser(parser:ICommandLineParser) : void
+    + change() : void
+}
+IDeviceChanger <|-- DeviceChanger
+DeviceChanger --> "_parser" ICommandLineParser
+DeviceChanger --> "_Console" IConsole
+@enduml

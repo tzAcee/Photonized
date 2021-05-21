@@ -1,0 +1,5 @@
+@startuml
+interface IDeviceReaderRepository {
+    + read_entries(path:string) : List<DeviceUserEntry>
+}
+@enduml

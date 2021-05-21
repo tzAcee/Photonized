@@ -11,6 +11,13 @@ namespace photoniced.common
 
             return value;
         }
+
+        public static string NotNullOrEmpty(string value, string name)
+        {
+            if (string.IsNullOrEmpty(value))
+                throw new ArgumentNullException(name);
+            return value;
+        }
         
     }
 }

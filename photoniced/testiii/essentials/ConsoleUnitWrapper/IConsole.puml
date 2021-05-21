@@ -1,0 +1,8 @@
+@startuml
+interface IConsole {
+    Write(message:string) : void
+    WriteLine(message:string) : void
+    Clear() : void
+    ReadLine() : string
+}
+@enduml

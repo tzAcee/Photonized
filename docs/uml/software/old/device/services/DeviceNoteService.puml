@@ -1,0 +1,11 @@
+@startuml
+class DeviceNoteService {
+    - <<const>> InfoFileName : string = ".photon.json"
+    + {static} get_file_path(path:string, create:bool) : string
+    + {static} exclude_directory_delete(path:string, sort_word:string) : void
+    + {static} delete_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} add_entry(path:string, entry:DeviceUserEntry) : void
+    + {static} read_entries(path:string) : List<DeviceUserEntry>
+}
+IDeviceNoteService <|-- DeviceNoteService
+@enduml

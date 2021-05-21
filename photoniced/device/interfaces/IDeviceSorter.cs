@@ -8,6 +8,6 @@ namespace photoniced.interfaces
         public void set_parser(ICommandLineParser parser);
         public void sort();
 
-        public DeviceUserEntry get_user_entry();
+     //   public DeviceUserEntry get_user_entry();
     }
 }

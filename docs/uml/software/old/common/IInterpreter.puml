@@ -1,0 +1,13 @@
+@startuml
+interface IContext {
+}
+interface IExpression {
+    Interpreter(context:IContext) : void
+}
+class "IDictionary`2"<T1,T2> {
+}
+class "IList`1"<T> {
+}
+IContext --> "Result<string,object>" "IDictionary`2"
+IContext --> "Error<string>" "IList`1"
+@enduml

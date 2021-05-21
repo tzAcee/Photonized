@@ -38,6 +38,8 @@ namespace photoniced.device
             {
                 path = "./";
             }
+            if (path.Length == 0)
+                path = "./";
 
             _parser.DirPath = path;
             Console.Title = "Device mounted on " + Path.GetFullPath(path);

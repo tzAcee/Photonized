@@ -1,0 +1,7 @@
+@startuml
+interface IDeviceSorter {
+    + set_parser(parser:ICommandLineParser) : void
+    + sort() : void
+    + get_user_entry() : DeviceUserEntry
+}
+@enduml

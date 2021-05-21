@@ -1,0 +1,6 @@
+@startuml
+interface IDeviceChanger {
+    + set_parser(parser:ICommandLineParser) : void
+    + change() : void
+}
+@enduml

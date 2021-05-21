@@ -1,0 +1,5 @@
+@startuml
+class UserInputService {
+    {static} + get_user_entry() : DeviceUserEntry
+}
+@enduml

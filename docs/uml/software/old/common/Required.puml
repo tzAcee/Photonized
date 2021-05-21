@@ -1,0 +1,5 @@
+@startuml
+class Required <<static>> {
+    + {static} NotNull(value:T, name:string) : T
+}
+@enduml

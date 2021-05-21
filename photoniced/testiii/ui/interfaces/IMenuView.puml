@@ -1,0 +1,8 @@
+@startuml
+interface IMenuView {
+    configure() : void
+    build() : void
+    show() : void
+    render() : void
+}
+@enduml

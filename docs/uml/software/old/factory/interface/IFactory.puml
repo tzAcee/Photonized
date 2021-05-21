@@ -1,0 +1,7 @@
+@startuml
+interface IFactory {
+}
+IFactory --> "Menu" Menu
+IFactory --> "CmdParser" ICommandLineParser
+IFactory --> "Device" Device
+@enduml

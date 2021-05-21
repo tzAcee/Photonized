@@ -26,7 +26,12 @@ namespace photoniced.device.repos
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                if(e.GetType().IsAssignableFrom(typeof(System.IO.FileNotFoundException)))
+                {
+                    Console.WriteLine("No Entries found.");
+                }
+                else
+                    Console.WriteLine(e.ToString());
                 return null;
             }
 

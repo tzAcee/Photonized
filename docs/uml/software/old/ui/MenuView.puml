@@ -1,0 +1,15 @@
+@startuml
+class MenuView {
+    - _path : string
+    + MenuView(args:string[], level:int, mh:List<MethodsHolder>, start_path:string)
+    + configure() : void
+    + build() : void
+    + show() : void
+    + render() : void
+}
+class "List`1"<T> {
+}
+ConsoleMenu <|-- MenuView
+IMenuView <|-- MenuView
+MenuView --> "_methods<MethodsHolder>" "List`1"
+@enduml

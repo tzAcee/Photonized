@@ -1,0 +1,8 @@
+@startuml
+class MenuBuilder {
+    + {static} get_args() : string[]
+    + {static} get_lvl() : int
+    + {static} get_methods(dev:Device) : List<MethodsHolder>
+}
+IMenuBuilder <|-- MenuBuilder
+@enduml

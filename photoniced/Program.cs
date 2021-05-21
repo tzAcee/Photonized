@@ -2,6 +2,8 @@
 using photoniced.factory;
 using photoniced.ui;
 using photoniced.essentials;
+using photoniced.common;
+using System;
 
 namespace photoniced
 {
@@ -10,6 +12,10 @@ namespace photoniced
         static void Main(string[] args)
         {
             IFactory mainFactory = new Factory(args);
+
+
+           
+
         }
     }
 }

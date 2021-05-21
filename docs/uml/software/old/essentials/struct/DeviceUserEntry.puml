@@ -1,0 +1,8 @@
+@startuml
+class DeviceUserEntry <<struct>> {
+    + DeviceUserEntry(name:string, desc:string, time:DateTime)
+    + SortWord : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+}
+DeviceUserEntry --> "SortTime" DateTime
+@enduml

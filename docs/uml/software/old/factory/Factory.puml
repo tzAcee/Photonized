@@ -1,0 +1,16 @@
+@startuml
+class Factory {
+    + Factory(args:string[])
+    - create_wrapper() : IConsole
+    - create_device_changer(wrapper:IConsole) : IDeviceChanger
+    - create_device_sorter(wrapper:IConsole) : IDeviceSorter
+    - create_device_reader(wrapper:IConsole) : IDeviceReader
+    - create_device(parser:ICommandLineParser, reader:IDeviceReader, sorter:IDeviceSorter, changer:IDeviceChanger) : Device
+    - create_menu(dev:Device) : Menu
+    - create_cmd_parser(args:string[]) : CommandLineParser
+}
+IFactory <|-- Factory
+Factory --> "Menu" Menu
+Factory --> "Device" Device
+Factory --> "CmdParser" ICommandLineParser
+@enduml

@@ -18,8 +18,6 @@ namespace photoniced.device
 
         private IConsole _Console;
 
-        private const int DEFAULT_SPLIT = 3;
-
         public DeviceSorter(IConsole console)
         {
             _Console = Required.NotNull(console, nameof(console));
@@ -30,31 +28,14 @@ namespace photoniced.device
             _parser = Required.NotNull(parser, nameof(parser));
         }
 
-        public DeviceUserEntry get_user_entry()
-        {
-            _Console.WriteLine("For which day you want to sort the pictures? (DD/MM/YYYY)");
-            string date = _Console.ReadLine();
-            var dateSplitted = date.Split('/');
-            if (dateSplitted.Length != DEFAULT_SPLIT)
-            {
-                //return new DeviceUserEntry();
-                throw new InvalidDataException();
-            }
-            
-            _Console.WriteLine("What did you do @ this day?");
-            string toSort = _Console.ReadLine();
-            
-            _Console.WriteLine("Give a little description for this day.");
-            string desc = _Console.ReadLine();
-
-            DateTime parsedTime = new DateTime(Convert.ToInt32(dateSplitted[2]), Convert.ToInt32(dateSplitted[1]),
-                Convert.ToInt32(dateSplitted[0]));
-            return new DeviceUserEntry(toSort, desc, parsedTime);
-        }
 
         public void sort()
         {
-            DeviceUserEntry entry = get_user_entry();
+            DeviceUserEntry entry = UserInputService.get_user_entry();
+            if(entry.Equals(default(DeviceUserEntry)))
+            {
+                return;
+            }
 
             //TODO check for parser for all modules
             var files = Directory.EnumerateFiles(_parser.DirPath, "*.*") // Remove/Add SearchOption if dont need to resort
@@ -62,9 +43,8 @@ namespace photoniced.device
 
             if (files.Count() == 0)
                 return;
-            var sortPath = Directory.CreateDirectory(_parser.DirPath+"/"+entry.SortWord);
+            var sortPath = Directory.CreateDirectory(Path.Combine(_parser.DirPath, entry.SortWord));
             
-            //TODO dont use index wtf
             int index = 0;
             
             foreach(var file in files)
@@ -76,7 +56,7 @@ namespace photoniced.device
                     continue;
                 try
                 {
-                    File.Move(curFile.FullName, sortPath+"/"+curFile.Name);
+                    System.IO.File.Move(curFile.FullName, Path.Combine(sortPath.FullName ,curFile.Name));
                     index++;
                 }
                 catch (Exception e)

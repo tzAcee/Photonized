@@ -1,0 +1,6 @@
+@startuml
+class NodePrinter {
+    + {static} print_tree(tree:Node, indent:string, last:bool) : void
+}
+INodePrinter <|-- NodePrinter
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+class Device {
+    + Device(parser:ICommandLineParser, deviceReader:IDeviceReader, deviceSorter:IDeviceSorter, deviceChanger:IDeviceChanger)
+    - init_modules() : void
+    + read() : void
+    + sort() : void
+    + change_device_path() : void
+    + delete() : void
+}
+Device --> "CmdParser" ICommandLineParser
+Device --> "_reader" IDeviceReader
+Device --> "_sorter" IDeviceSorter
+Device --> "_changer" IDeviceChanger
+@enduml

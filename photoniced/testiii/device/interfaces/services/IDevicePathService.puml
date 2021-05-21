@@ -1,0 +1,6 @@
+@startuml
+interface IDevicePathService {
+    {static} path_valid(path:string) : bool
+    {static} get_file(path:string) : FileInfo
+}
+@enduml

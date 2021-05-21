@@ -1,0 +1,37 @@
+@startuml
+class Folder {
+    + Name : string <<get>> <<set>>
+    + Path : string <<get>>
+    + Accept(visitor:IVisitor) : void
+    + Folder(path:string)
+    + Folder(info:IO.DirectoryInfo)
+}
+class File {
+    + Name : string <<get>> <<set>>
+    + Size : long <<get>>
+    + Path : string <<get>>
+    + Accept(visitor:IVisitor) : void
+    + File(path:string)
+    + File(info:IO.FileInfo)
+}
+class MoveByCreationDate {
+    + MoveByCreationDate(dest:IFolder, creationDate:DateTime)
+    + MoveFiles(src:IFolder) : void
+    + Visit(element:IFolder) : void
+    + Visit(element:IFile) : void
+    + Visit(element:IVisitorElement) : void
+}
+class "IEnumerable`1"<T> {
+}
+IFolder <|-- Folder
+Folder --> "Parent" IFolder
+Folder --> "Files<IFile>" "IEnumerable`1"
+Folder --> "Folders<IFolder>" "IEnumerable`1"
+IFile <|-- File
+File --> "Created" DateTime
+File --> "Changed" DateTime
+File --> "Parent" IFolder
+IDataProcessor <|-- MoveByCreationDate
+MoveByCreationDate --> "CreationDate" DateTime
+MoveByCreationDate --> "DestFolder" IFolder
+@enduml

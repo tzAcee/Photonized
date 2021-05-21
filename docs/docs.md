@@ -104,7 +104,7 @@ Die Präsentationsschicht ist, wie die Adaptersschicht im Modul `ui` zu finden u
 
 Jede Schicht wird in der `Factory` bereitgestellt.
 
-![UML Diagramm der Software](uml/software/uml_programm.svg)
+![UML Diagramm der Software](uml/software/softwareuml.svg)
 
 <a name="DDD"></a>
 ## Domain Driven Design
@@ -185,7 +185,6 @@ Das lässt sich auflösen indem, man den Kommentar mehrzeilig macht. Diesen Smel
 ## Programming Principles
 #### KISS
 Um die Software möglichst simpel zu halten, wurde auf eine größere Viewschicht verzichtet. Da es zum Teil mehrere tausend Bilder sein können, wäre auch ein Click-To-Select Feature nicht allzu sinnvoll. Somit ist eine simple Konsolenanwendung optimal.
-Außerdem basiert die Anwendung zunächst auf dem "Denial of Service" Prinzip. D.h. bei falscher Eingabe wird das Programm mit einer Exception abgebrochen. Das ist auf jeden Fall nicht die nutzerfreundlichste Lösung, aber zu dem Zeitpunkt, die Sicherste, sowie Simpelste.
 
 #### GRASP
 In der Präsentationsschicht wird sehr auf Polymorphismus gesetzt (s. `MenuView`), um unnötige Komplikationen zu vermeiden. Obwohl vom genutzen Framework die Polymorphie gefordert ist, vermittelt der Aufbau dadurch eine sehr strikte Objektorientierung des Projekts.
@@ -201,6 +200,7 @@ Durch die Factory Lösung und die klare Schichtarchitektur, kann jedes einzelne 
 
 <a name="entwurf"></a>
 ## Entwurfsmuster
+##### Factory
 Von Beginn an war geplant eine Factory zu verwenden. Jedoch erstmal nur experimentell, wie es in folgendem Bild zu sehen ist. Es werden ständig neue Objekte erzeugt, was logischerweise zu inkosistenzen führen kann.
 ![Old Factory Content](assets/fac_old1.png)
 ![Old Factory Usage](assets/fac_old2.png)
@@ -210,4 +210,19 @@ Nachdem eine richtige Factory umgesetzt wurde, konnte diese endlich richtig verw
 ![New Factory Usage](assets/fac_new2.png)
 
 Der Zweck der Factory ist, dass man innerhalb von Klassen keine `new`-Keywords hat. Sondern eben nur in der Factory. Das hilft Inkosistenzen durch doppelte Objekte zu vermeiden. 
+##### Interpreter Pattern
+Zusätzlich wurde noch das Interpreter Pattern genutzt. Dieses findet normalerweise Einsatz in Compilerprojekten. Jedoch hilft es hier enorm viel, die User-Eingabe, die bspw. im Device Sorter gebraucht wird, aus dem Device Sorter zu entkoppeln. Wodurch die Struktur einfach klarer wird.
+Das Pattern besteht aus Context, sowie Expression. In der Expression wird interpretiert und das grobe Ziel ist es quasi, Befehle des Nutzers abzufangen, zu validieren und zum Schluss für das Device zu interpretieren. 
+![Before Interpreter](assets/interpreterpatternBefore.png)
+![With Interpreter](assets/interpreterpatternAfter.png)
+![Expression of Interpreter](assets/expressionafter.png)
+
+Im Vergleich sieht man, dass die get_user_entry() Funktion aus dem DeviceSorter verschwindet und sowohl ein Context, als auch eine Expression entsteht. Diese werden im Interpreterpattern in einem Service (UserInputService) benutzt, der vom Sorter statisch aufgerufen wird. Eine Expression-Interface besteht stets aus einem Interpreter, welches als Methode implementiert ist. In dem Fall wurde nur die MoveFilesExpression eingebaut. Zusätzliche Nutzerinteraktion kann nun über weitere Expressions hinzugefügt werden.
+Die Vorteile dieses Musters sind ganz klar die Erweiterbarkeit, die durch die Expressions gegeben ist, die einfache Testbarkeit und die Loskopplung von Logik und Nutzerinteraktion.
+##### Visitor Pattern
+Dieses Muster soll nicht zwingend betrachtet werden. Die Grundstruktur wurde zwar implementiert, aber noch noch nicht in die Anwendung eingebaut, da dies die gesamte Architektur der Submodule verwerfen würde und somit alles von vorne geschrieben werden musste. Im UML sieht die Struktur des Visitor Patterns aber so aus:
+![Visitor Struktur](assets/visitor.png)
+
+Dieses Muster würde, sofern richtig eingebaut, eine bessere Testbarkeit, Wiederverwendbarkeit und Erweiterbarkeit bringen, da die Funktionalität des Programms über weitere DataProcessor erweitern werden könnte, die einzeln ideal getestet werden könnten.
+
 

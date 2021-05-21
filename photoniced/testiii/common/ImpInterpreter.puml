@@ -1,0 +1,15 @@
+@startuml
+class UserInput {
+}
+class MoveFilesExpression {
+    + Interpreter(context:IContext) : void
+}
+class "IDictionary`2"<T1,T2> {
+}
+class "IList`1"<T> {
+}
+IContext <|-- UserInput
+UserInput o-> "Result<string,object>" "IDictionary`2"
+UserInput o-> "Error<string>" "IList`1"
+IExpression <|-- MoveFilesExpression
+@enduml

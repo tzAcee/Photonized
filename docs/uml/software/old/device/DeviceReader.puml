@@ -1,0 +1,14 @@
+@startuml
+class DeviceReader {
+    + DeviceReader(console:IConsole)
+    + set_parser(parser:ICommandLineParser) : void
+    + read() : void
+    + print_structure() : void
+    + compare(entries:List<DeviceUserEntry>) : void
+    + delete() : void
+    + print_read_info() : void
+}
+IDeviceReader <|-- DeviceReader
+DeviceReader --> "_parser" ICommandLineParser
+DeviceReader --> "_Console" IConsole
+@enduml

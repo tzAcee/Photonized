@@ -1,0 +1,9 @@
+@startuml
+class ConsoleUnitWrapper {
+    + Write(message:string) : void
+    + WriteLine(message:string) : void
+    + ReadLine() : string
+    + Clear() : void
+}
+IConsole <|-- ConsoleUnitWrapper
+@enduml

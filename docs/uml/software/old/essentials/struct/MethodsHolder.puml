@@ -1,0 +1,7 @@
+@startuml
+class MethodsHolder <<struct>> {
+    + MethodsHolder(method:Action, description:string)
+    + _description : string <<get>>
+}
+MethodsHolder --> "_method" Action
+@enduml

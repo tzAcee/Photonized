@@ -1,0 +1,6 @@
+@startuml
+interface ICommandLineParser {
+    DirPath : string <<get>> <<set>>
+    parse(path:string[]) : void
+}
+@enduml
