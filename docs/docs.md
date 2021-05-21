@@ -105,6 +105,7 @@ Die Präsentationsschicht ist, wie die Adaptersschicht im Modul `ui` zu finden u
 Jede Schicht wird in der `Factory` bereitgestellt.
 
 ![UML Diagramm der Software](uml/software/softwareuml.svg)
+[In Github öffnen](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/uml/software/softwareuml.svg)
 
 <a name="DDD"></a>
 ## Domain Driven Design
