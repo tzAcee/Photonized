@@ -40,7 +40,7 @@ Um die Anwendung zum Laufen zu bekommen sind im Grunde zwei Schritte zu tun.
 Der erste ist, die externen Bibliotheken, sowie Abhängigkeiten wiederherzustellen.
 Dies geschieht über `dotnet restore`
 
-Als nächstes kann die Anwendung über `dotnet run` gestartet werden (über diesen Befehl können auch die Startparameter übergeben werden, sofern man die Anwendung nicht über die Binaries startet. Sonst muss man die Parameter Betriebssystem spezifisch, beim Anwendungsstart, übergeben).
+Als Nächstes kann die Anwendung über `dotnet run` gestartet werden (über diesen Befehl können auch die Startparameter übergeben werden, sofern man die Anwendung nicht über die Binaries startet. Sonst muss man die Parameter Betriebssystem spezifisch, beim Anwendungsstart, übergeben).
 
 (Code wurde in Visual Studio (Windows) und in Rider (Linux) programmiert, somit sollte es direkt laufen, wenn man es damit startet)
 <a name="params"></a>
@@ -71,14 +71,14 @@ Die Test- sowie Codecoverage ist aus dem nächsten Bild zu entnehmen.
 
 ![Test und Codecoverage](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/test_cover.png)
 
-Wie man sieht sind noch nicht alle Tests implementiert, jedoch würde dies ebenfalls die Codezeilengrenze überschreiten. Denn es wurde zum Beispiel ein Console Wrapper (um die Konsole "mockbar" zu machen) geschrieben, jedoch kein Wrapper für die "File" Klasse von C#. Die Console Wrapper Klasse ist nebenbei unter [Refactoring](#refactoring) zu finden.
+Wie man sieht, sind noch nicht alle Tests implementiert, jedoch würde dies ebenfalls die Codezeilengrenze überschreiten. Denn es wurde zum Beispiel ein Console Wrapper (um die Konsole "mockbar" zu machen) geschrieben, jedoch kein Wrapper für die "File" Klasse von C#. Die Console Wrapper Klasse ist nebenbei unter [Refactoring](#refactoring) zu finden.
 
 Das Prinzip der geschriebenen Tests ist relativ simpel. Die erste Eigenschaft ist, dass die Tests sich jeweils immer nur um maximal einen "Use Case" kümmern sollen, denn so weiß man ganz genau, wo auch der Fehler entstanden ist. Einfachheitshalber wurde dann auch nur ein `Assert` bzw. ein (ein weiteres bei chronologischen Abläufen) `Setup` pro Test verwendet.
 
 Weitere Eigenschaften der Tests sind "isoliert" und "zustandslos". Letzteres ist ziemlich klar. Die Testklasse, soll einfach keinen Zustand speichern/haben. Isoliert heißt, dass die individuellen Tests die anderen nicht beeinflussen.
 
 
-Ein Mock mit dem Framework war ziemlich einfach, ein Beispielt sieht so aus: `var reader = new Mock<IDeviceReader>()`, um auf das Objekt direkt zuzugreifen müsste man auf `reader.Object` zugreifen.
+Ein Mock mit dem Framework war ziemlich einfach, ein Beispielt sieht so aus: `var reader = new Mock<IDeviceReader>()`, um auf das Objekt direkt zuzugreifen, müsste man auf `reader.Object` zugreifen.
 
 Um einen Funktionsaufruf zu überprüfen, muss man entweder direkt `Verify` aufrufen (`Mock.Get(view).Verify((m)=>m.render(), Times.Once);`) oder vorher ein Setup mit den genauen Funktionen aufbauen und später dann ein `Verify` aufrufen:
 ```
@@ -97,8 +97,8 @@ Um einen Funktionsaufruf zu überprüfen, muss man entweder direkt `Verify` aufr
 
 ![Architecture](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/onion.png)
 
-Bei der Planung der Architektur gab es einige Punkte die ausschlaggebend waren. Diese sind die Wiederverwendbarkeit, Testbarkeit, Übersichtlichkeit und zu letzt Austauschbarkeit (Modularität) der Schichten. Die Punkte Testbarkeit, sowie Wiederverwendbarkeit, dürften klar sein. Mit Übersichtlichkeit ist gemeint, dass für den Fall eines Fehlers, direkt ersichtlich ist, wo der Fehler herkommt. Also bspw. wenn Daten falsch geliefert werden, weiß man direkt, dass es sich um einen Fehler innerhalb der inneren Strukturen handelt und somit nur dort gedebugged werden musst. 
-Mit Modularität ist gemeint, dass man die Schichten wie Module wirken, die ihre eigene Aufgaben erfüllen. So ist es mit nur wenig Aufwand möglich die UI von einer ConsoleView auf eine WPF-View zu tauschen. Da die Aufrufsfunktionen die gleichen bleiben. Außerdem soll die Nutzerinteraktion, möglichst von der Geschäftslogik losgekoppelt werden. Da dadurch die Modularität verloren geht - man müsste bspw. beim Anpassen der GUI, muss die Geschäftslogik angepasst werden. Beim Ändernung der Logik, findet man (bei größeren Applikationen) nur schwierig alle davon abhängigen Stellen.
+Bei der Planung der Architektur gab es einige Punkte, die ausschlaggebend waren. Diese sind die Wiederverwendbarkeit, Testbarkeit, Übersichtlichkeit und zuletzt Austauschbarkeit (Modularität) der Schichten. Die Punkte Testbarkeit, sowie Wiederverwendbarkeit, dürften klar sein. Mit Übersichtlichkeit ist gemeint, dass für den Fall eines Fehlers, direkt ersichtlich ist, wo der Fehler herkommt. Also bspw. wenn Daten falsch geliefert werden, weiß man direkt, dass es sich um einen Fehler innerhalb der inneren Strukturen handelt und somit nur dort gedebugged werden muss. 
+Mit Modularität ist gemeint, dass die Schichten wie Module wirken, welche ihre eigenen Aufgaben erfüllen. So ist es mit nur wenig Aufwand möglich die UI von einer ConsoleView auf eine WPF-View zu tauschen. Da die Aufrufsfunktionen die gleichen bleiben. Außerdem soll die Nutzerinteraktion, möglichst von der Geschäftslogik losgekoppelt werden. Da dadurch die Modularität verloren geht - man müsste bspw. beim Anpassen der GUI, muss die Geschäftslogik angepasst werden. Beim Ändernung der Logik, findet man (bei größeren Applikationen) nur schwierig alle davon abhängigen Stellen.
 
 Die Software besteht, also um es zusammenfassen, aus drei Schichten.
 Einer Präsentationsschicht (hier Plugins), einer Vorbereitungsschicht (Adapters) und einer logischen Schicht (in dem Fall Domain Code). Diese werden im folgenden von innen nach außen erläutert.
@@ -128,18 +128,18 @@ DeviceSorter | Sortiert die Einträge nach Nutzereingaben in der ausgewählten P
 CommandLineParser | Repräsentiert die vom Nutzer eingegebenen Daten, sodass sie vom Device gelesen werden können.
 CommandLineOptions | Gibt die Möglichkeiten zur Parametrierung des Devices an. 
 Node | Repräsentiert einen Ordner innerhalb eines Verzeichnisses (beinhaltet Kinder, die als Unterverzeichnisse im Device dargestellt werden). 
-MethodsHolder | Repräsentieren die Funktionalität der visuellen Schicht, durch die Funktion und dem dazugehörigen Titel .
+MethodsHolder | Repräsentieren die Funktionalität der visuellen Schicht, durch die Funktion und dem dazugehörigen Titel.
 DeviceUserEntry | Stellt die Struktur der Nutzereingabe beim Sortieren dar.   
 Menu | Beinhaltet die Darstellung des Menüs. Gibt das an, was der Nutzer am Ende zu sehen bekommt.
 MenuBuider | Erzeugt aus den MethodsHoldern, visuelle Menüeinträge.
 MenuView | Verwaltet die Sicht bzw. den Aufbau des Menüs. Greift auf den MenuBuilder zurück, um die Menüeinträge herzustellen.
 
 #### Analyse & Begründung der verwendeten Muster
-Außerdem wurden einige taktische Muster des DDD verwendet. Die im folgenden aufgezeigt werden.
+Außerdem wurden einige taktische Muster des DDD verwendet. Die im Folgenden aufgezeigt werden.
 ###### Value Objects
-Zum Darstellen der Menüfelder wurden auch Value Objects - z.B. der MethodsHolder - verwendet. Dieser beinhaltet die Action & den Titel der Action im Menü. Die Action ist in dem Fall einfach eine fixe, festgelegte Funktion, die ausgeführt wird. Das gesamte Objekt ist völlig unveränderlich und befindet sich in einem "as it is" Zustand. Vorallem beim festlegen der Funktion ist die Unveränderlichkeit ein entscheidender Punkt, da dieser zu jedem Zeitpunkt von frei von Seiteneffekten bleibt und somit ungewolltes Verhalten vorbeugt. Außerdem ist das Objekt ebenfalls zu jedem Zeitpunkt gültig.
+Zum Darstellen der Menüfelder wurden auch Value Objects - z.B. der MethodsHolder - verwendet. Dieser beinhaltet die Action & den Titel der Action im Menü. Die Action ist in dem Fall einfach eine fixe, festgelegte Funktion, die ausgeführt wird. Das gesamte Objekt ist völlig unveränderlich und befindet sich in einem "as it is" Zustand. Vorallem beim Festlegen der Funktion ist die Unveränderlichkeit ein entscheidender Punkt, da dieser zu jedem Zeitpunkt von frei von Seiteneffekten bleibt und somit ungewolltes Verhalten vorbeugt. Außerdem ist das Objekt ebenfalls zu jedem Zeitpunkt gültig.
 ###### Entities
-In diesem Projekt gibt es nicht direkt Entities mit einer festen ID, dennoch kann man beim Device von einer Entität sprechen, dieses wird durch einen klaren Pfad festgelegt, außerdem ist das Device sowohl zur Initialisierung als auch zur Laufzeit ständig gültig. Mit der Laufzeit führt das Device verschiedenen Methoden durch (sort, read) und kann auch verändert (change) werden. Dieses Verhalten wird jedoch wiedderum in die einzelnen Submodule ausgelagert. Problem daran, dass die Identität keine ID ist, ist dass der Pfad selbst verändert werden kann & auch soll. Dennoch ist dieser eindeutig, da die Anwendung nur auf einem Rechner läuft und die Pfade nur einmalig verfügbar sind. Dadurch wird dieser mehr oder weniger aussagekräftig und beschreibt das Device sehr gut.
+In diesem Projekt gibt es nicht direkt Entities mit einer festen ID, dennoch kann man beim Device von einer Entität sprechen, dieses wird durch einen klaren Pfad festgelegt, außerdem ist das Device sowohl zur Initialisierung als auch zur Laufzeit ständig gültig. Mit der Laufzeit führt das Device verschiedenen Methoden durch (sort, read) und kann auch verändert (change) werden. Dieses Verhalten wird jedoch wiedderum in die einzelnen Submodule ausgelagert. Problem daran, dass die Identität keine ID ist, ist, dass der Pfad selbst verändert werden kann & auch soll. Dennoch ist dieser eindeutig, da die Anwendung nur auf einem Rechner läuft und die Pfade nur einmalig verfügbar sind. Dadurch wird dieser mehr oder weniger aussagekräftig und beschreibt das Device sehr gut.
 
 Man könnte beispielsweise die DeviceUserEntries als Entitäten definieren, diese werden jedoch nicht direkt als Objekt im Programm gespeichert, sondern innerhalb der JSON Datei als verhaltenloses struct und später ebenfalls als struct wieder eingelesen. Dort wäre die Identität durch das SortierWord und das Datum gegeben. Außerdem sind diese durch das Device innerhalb des Lebenszyklus veränderbar.
 
@@ -154,16 +154,16 @@ Das könnte man analog zum Hinzufügen noch im Sorter machen, jedoch wäre dies 
 ###### Domain Services
 Das wohl gängiste Muster sind die Domain Services, welche sich in den Modulen innerhalb der "services" Ordner befinden. Diese sind dazu gedacht unabhängige bzw. komplett isolierte Aufgabe durchzuführen. Wie zum Beispiel aus einem Pfadstring, den Filenamen zu extrahieren. Da sie nur eine bestimmte Aufgabe erfüllen, sind sie auch zustandslos. Die Services dort können nicht direkt einer Entität oder einem Value Object zugeordnet werden, da sie wie erwähnt unabhängig intialisiert wurden. So kann z.B. die zuvor genannte Funktion sowohl im Device, als auch im CommandlineParser Gebrauch finden. 
 
-Der DeviceNoteService greift beispielsweise direkt auf die FileSystem Bibliothek zurück um die nötigen Informationen zu bekommen.
+Der DeviceNoteService greift beispielsweise direkt auf die FileSystem Bibliothek zurück, um die nötigen Informationen zu bekommen.
 Der DevicePathService hat in der Funktion get_file() Referenzen von Value Objects, wie dem DeviceSorter oder auch von dem Service DeviceNoteService, weshalb man keine eindeutige Zuordnung feststellen kann.
-Die Services selbst werden zunächst als Interface (Vertrag) definiert und später in dem dem Service selbst implementiert. Das Domänenmodell gibt also zunächst vor, welches Ergebnis erwartet wird.
+Die Services selbst werden zunächst als Interface (Vertrag) definiert und später in dem Service selbst implementiert. Das Domänenmodell gibt also zunächst vor, welches Ergebnis erwartet wird.
 
 <a name="refactor"></a>
 ## Refactoring
 Zunächst wurde eine Refactoring für das Unit Testing betrieben, denn in C# kann man die Console Klasse nicht direkt testen. Man muss diese zunächst Wrappen und innerhalb der Unit Tests mocken.
 
 
-Um Code-Smells richtig zu analysieren wurde eine Visual Studio Extension, namens Designite benutzt. Diese bietet einen Haufen an Details über den geschrieben Code und zeigt unter Anderem auch die erkannten Code-Smells an. In dem Fall wird sich auch nur auf diese Smells fokusiert:
+Um Code-Smells richtig zu analysieren wurde eine Visual Studio Extension, namens Designite benutzt. Diese bietet einen Haufen an Details über den geschriebenen Code und zeigt unter Anderem auch die erkannten Code-Smells an. In dem Fall wird sich auch nur auf diese Smells fokusiert: (Die Rechtecke repräsentieren Klassen, die Farbe die Smell Dichte)
 
 ![](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/smell1.PNG) | ![](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/smell2.PNG) |![](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/smell3.PNG)
 
@@ -202,7 +202,7 @@ Allgemein werden sehr viele Klassen bzw. Subsysteme (s. `device`) angelegt, um e
 Das macht den Code an sich übersichtlicherer und logischerweise auch strukturierter, da man dadurch (bspw. allein durch die Namensgebung) genau weiß, welche Klassen zueinander gehören.
 
 #### DRY
-Um Wiederholungen zu vermeiden wurde Abläufe entweder in Funktionen ausgelagert oder es wurde, je nach dem, direkt ein ganzer Services geschrieben. Beispielsweise der DeviceNoteService. Die Funktion read_entries(*) wird von unterschiedlichen (& unabhängigen) Funktionen aufgerufen, ist jedoch selbst nur einmal definiert. 
+Um Wiederholungen zu vermeiden wurde Abläufe entweder in Funktionen ausgelagert oder es wurde, je nachdem, direkt ein ganzer Service geschrieben. Beispielsweise der DeviceNoteService. Die Funktion read_entries(*) wird von unterschiedlichen (& unabhängigen) Funktionen aufgerufen, ist jedoch selbst nur einmal definiert. 
 
 #### SOLID
 Durch das Single Resposibility Principle, ist jede Klasse auf eine eigene Funktion limitiert, jede weitere abhängige Funktion wird in eine zusätzliche Klasse ausgelagert (DeviceReader, Sorter, etc..). Der Sinn davon ist die Unit Tests später einfacher zu machen, also damit man nicht noch zusätzliche Refactorings diesbezüglich machen muss. Außerdem werden die Klassen dadurch kompakter, wodurch die Lesbarkeit und die Möglichkeit diese auch später zu verbessern, besser wird.
@@ -221,7 +221,7 @@ Nachdem eine richtige Factory umgesetzt wurde, konnte diese endlich richtig verw
 ![New Factory Content](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/fac_new1.png)
 ![New Factory Usage](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/fac_new2.png)
 
-Der Zweck der Factory ist, dass man innerhalb von Klassen keine `new`-Keywords hat. Sondern eben nur in der Factory. Das hilft Inkosistenzen durch doppelte Objekte zu vermeiden. Die logischen Folgen der Factory sind, die Erweiterbarkeit und die Testbarkeit der Komponenten, was auch der Grund dafür ist, wieso von Anfang an eine genutzt wurde. Außerdem kann man dadurch sehr konsistent auf die einzelnen Objekte zugreifen ohne Inkonsistenzen zu erzeugen. D.h. die Factory fördert ebenfalls die Wiederverwendbarkeit der zu produzierenden Objekte.
+Der Zweck der Factory ist, dass man innerhalb von Klassen keine `new`-Keywords hat. Sondern eben nur in der Factory. Das hilft Inkosistenzen durch doppelte Objekte zu vermeiden. Die logischen Folgen der Factory sind, die Erweiterbarkeit und die Testbarkeit der Komponenten, was auch der Grund dafür ist, wieso von Anfang an eine genutzt wurde. Außerdem kann man dadurch sehr sicher auf die einzelnen Objekte zugreifen ohne Inkonsistenzen zu erzeugen. D.h. die Factory fördert ebenfalls die Wiederverwendbarkeit der zu produzierenden Objekte.
 ##### Interpreter Pattern
 Zusätzlich wurde noch das Interpreter Pattern genutzt. Dieses findet normalerweise Einsatz in Compilerprojekten. Jedoch hilft es hier enorm viel, die User-Eingabe, die bspw. im Device Sorter gebraucht wird, aus dem Device Sorter zu entkoppeln. Wodurch die Struktur einfach klarer wird.
 Das Pattern besteht aus Context, sowie Expression. In der Expression wird interpretiert und das grobe Ziel ist es quasi, Befehle des Nutzers abzufangen, zu validieren und zum Schluss für das Device zu interpretieren. 
