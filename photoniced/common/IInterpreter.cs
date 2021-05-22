@@ -1,4 +1,5 @@
-﻿using System;
+﻿using photoniced.essentials.ConsoleUnitWrapper;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,7 +14,7 @@ namespace photoniced.common
 
     public interface IExpression
     {
-        void Interpreter(IContext context);
+        void Interpreter(IContext context, IConsole internConsole);
     }
 
 

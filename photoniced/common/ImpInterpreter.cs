@@ -1,4 +1,5 @@
-﻿using System;
+﻿using photoniced.essentials.ConsoleUnitWrapper;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,13 +15,13 @@ namespace photoniced.common
 
     public class MoveFilesExpression : IExpression
     {
-        public void Interpreter(IContext context)
+        public void Interpreter(IContext context, IConsole internConsole)
         {
 
              const int DEFAULT_SPLIT = 3;
              context.Result.Add("Command", 1);
-            Console.WriteLine("For which day you want to sort the pictures ? (DD / MM / YYYY)");
-            var datetime = Console.ReadLine();
+            internConsole.WriteLine("For which day you want to sort the pictures ? (DD / MM / YYYY)");
+            var datetime = internConsole.ReadLine();
             var dateSplitted = datetime.Split('/');
             if (dateSplitted.Length != DEFAULT_SPLIT)
             {
@@ -32,8 +33,8 @@ namespace photoniced.common
 
 
 
-            Console.WriteLine("What did you do @ this day?");
-            string toSort = Console.ReadLine();
+            internConsole.WriteLine("What did you do @ this day?");
+            string toSort = internConsole.ReadLine();
 
             if (string.IsNullOrEmpty(toSort))
             {
@@ -44,8 +45,8 @@ namespace photoniced.common
             context.Result.Add("FolderName", toSort);
 
 
-            Console.WriteLine("Give a little description for this day.");
-            string desc = Console.ReadLine();
+            internConsole.WriteLine("Give a little description for this day.");
+            string desc = internConsole.ReadLine();
 
             context.Result.Add("description", desc);
         }

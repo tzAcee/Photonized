@@ -1,18 +1,19 @@
 ﻿using photoniced.common;
 using photoniced.essentials;
+using photoniced.essentials.ConsoleUnitWrapper;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace photoniced.device.services
 {
-    class UserInputService
+    public class UserInputService
     {
-        static public DeviceUserEntry get_user_entry()
+        static public DeviceUserEntry get_user_entry(IConsole internConsole)
         {
             var user = new UserInput();
             var move = new MoveFilesExpression();
-            move.Interpreter(user);
+            move.Interpreter(user, internConsole);
 
             if (user.Error.Count > 0)
             {

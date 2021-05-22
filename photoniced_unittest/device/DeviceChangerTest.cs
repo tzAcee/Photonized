@@ -60,7 +60,7 @@ namespace photoniced_unittest.device
             var changer = new DeviceChanger(console.Object);
             changer.set_parser(parser.Object);
 
-            Assert.ThrowsException<ArgumentNullException>(() => changer.change());
+            Assert.ThrowsException<NullReferenceException>(() => changer.change());
 
            // console.VerifyAll();
         }

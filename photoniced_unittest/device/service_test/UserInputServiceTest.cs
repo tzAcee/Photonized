@@ -1,74 +1,57 @@
-using System;
-using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using photoniced.device;
+using photoniced.device.services;
 using photoniced.essentials;
 using photoniced.essentials.ConsoleUnitWrapper;
-using photoniced.interfaces;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace photoniced_unittest.device
+namespace photoniced_unittest.device.service_test
 {
     [TestClass]
-    public class DeviceSorterTest
+    public class UserInputServiceTest
     {
-        [TestMethod]
-        public void set_parser_test()
-        {
-            var console = new Mock<IConsole>();
-            var reader = new Mock<DeviceSorter>(console.Object);
-            Assert.ThrowsException<ArgumentNullException>(() => reader.Object.set_parser(null));
-        }
-
-        // INFO
-        // Ignore dekorierte Tests in UserInputServiceTest verschoben.
-        [Ignore]
         [TestMethod]
         public void get_user_entry_intro_test()
         {
             var console = new Mock<IConsole>();
-            console.Setup(item => item.WriteLine("For which day you want to sort the pictures? (DD/MM/YYYY)"));
+            console.Setup(item => item.WriteLine("For which day you want to sort the pictures ? (DD / MM / YYYY)"));
             console.Setup(func => func.ReadLine()).Returns("12/03/2222");
 
 
-            var sorter = new DeviceSorter(console.Object);
-        //    sorter.get_user_entry();
+            UserInputService.get_user_entry(console.Object);
 
             console.VerifyAll();
         }
 
-        [Ignore]
         [TestMethod]
         public void get_user_entry_name_test()
         {
             var console = new Mock<IConsole>();
-            console.Setup(item => item.WriteLine("For which day you want to sort the pictures? (DD/MM/YYYY)"));
+            console.Setup(item => item.WriteLine("For which day you want to sort the pictures ? (DD / MM / YYYY)"));
             console.Setup(func => func.ReadLine()).Returns("12/03/2222");
             console.Setup(item => item.WriteLine("What did you do @ this day?"));
 
-            var sorter = new DeviceSorter(console.Object);
-        //    sorter.get_user_entry();
+            UserInputService.get_user_entry(console.Object);
 
             console.VerifyAll();
         }
 
-        [Ignore]
         [TestMethod]
         public void get_user_entry_description_test()
         {
             var console = new Mock<IConsole>();
-            console.Setup(item => item.WriteLine("For which day you want to sort the pictures? (DD/MM/YYYY)"));
+            console.Setup(item => item.WriteLine("For which day you want to sort the pictures ? (DD / MM / YYYY)"));
             console.Setup(func => func.ReadLine()).Returns("12/03/2222");
             console.Setup(item => item.WriteLine("What did you do @ this day?"));
             console.Setup(item => item.WriteLine("Give a little description for this day."));
 
-            var sorter = new DeviceSorter(console.Object);
-            //sorter.get_user_entry();
+            UserInputService.get_user_entry(console.Object);
 
             console.VerifyAll();
         }
 
-        [Ignore]
         [TestMethod]
         public void get_user_entry_return_test()
         {
@@ -78,28 +61,18 @@ namespace photoniced_unittest.device
                 .Returns("test_name")
                 .Returns("test_description");
 
-            var sorter = new DeviceSorter(console.Object);
-
             DateTime parsedTime = new DateTime(2222, 03, 12);
 
             Assert.AreEqual(new DeviceUserEntry("test_name", "test_description", parsedTime), photoniced.device.services.UserInputService.get_user_entry(console.Object));
 
         }
 
-        [Ignore]
         [TestMethod]
         public void get_user_entry_split_null_test()
         {
-            var console = new Mock<IConsole>();;
-            var sorter = new DeviceSorter(console.Object);
+            var console = new Mock<IConsole>();
 
             Assert.ThrowsException<NullReferenceException>(() => photoniced.device.services.UserInputService.get_user_entry(console.Object));
-        }
-
-        [TestMethod]
-        public void sort()
-        {
-            // TODO
         }
     }
 }

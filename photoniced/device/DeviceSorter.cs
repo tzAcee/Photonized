@@ -31,7 +31,7 @@ namespace photoniced.device
 
         public void sort()
         {
-            DeviceUserEntry entry = UserInputService.get_user_entry();
+            DeviceUserEntry entry = UserInputService.get_user_entry(_Console);
             if(entry.Equals(default(DeviceUserEntry)))
             {
                 return;
@@ -69,6 +69,8 @@ namespace photoniced.device
             if (index == 0)
             {
                 Directory.Delete(sortPath.FullName);
+                _Console.WriteLine("No entries with this creation date found.");
+                _Console.ReadLine();
             }
             else
             {
