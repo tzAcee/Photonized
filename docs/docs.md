@@ -92,6 +92,8 @@ Um einen Funktionsaufruf zu überprüfen, muss man entweder direkt `Verify` aufr
 ```
 ![Test UML (Zeigt die Isolation)](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/uml/tests/uml_tests.png)
 
+Ausführung der Tests erfolgt über eine IDE (Visual Studio oder Rider IDE), da die CLI mit `dotnet test` hängen bleibt.
+
 <a name="clean"></a>
 ## Clean Architecture
 
