@@ -1,13 +1,13 @@
 # Dokumentation: Photonized
-  - [Was ist Photonized?](#was-ist-photoniced)
-  - [Wie lasse ich die Software laufen?](#wie-lasse-ich-die-software-laufen)
+  - [Was ist Photonized?](#what)
+  - [Wie lasse ich die Software laufen?](#run)
 	- [Startparameter](#params)
   - [Frameworks](#frameworks)
   - [Unit Testing](#testi)
-  - [Clean Architecture](#clean-architecture)
-  - [Domain Driven Design](#domain-driven-design)
+  - [Clean Architecture](#clean)
+  - [Domain Driven Design](#DDD)
   - [Refactoring](#refactoring)
-  - [Programming Principles](#princ)
+  - [Programming Principles](#principle)
   - [Entwurfsmuster](#entwurfsmuster)
 
 <a name="what"></a>
@@ -71,7 +71,7 @@ Die Test- sowie Codecoverage ist aus dem nächsten Bild zu entnehmen.
 
 ![Test und Codecoverage](https://raw.githubusercontent.com/tzAcee/photonized/main/docs/assets/test_cover.png)
 
-Wie man sieht, sind noch nicht alle Tests implementiert, jedoch würde dies ebenfalls die Codezeilengrenze überschreiten. Denn es wurde zum Beispiel ein Console Wrapper (um die Konsole "mockbar" zu machen) geschrieben, jedoch kein Wrapper für die "File" Klasse von C#. Die Console Wrapper Klasse ist nebenbei unter [Refactoring](#refactoring) zu finden.
+Wie man sieht, sind noch nicht alle Tests implementiert, jedoch würde dies ebenfalls die Codezeilengrenze überschreiten. Denn es wurde zum Beispiel ein Console Wrapper (um die Konsole "mockbar" zu machen) geschrieben, jedoch kein Wrapper für die "File" Klasse von C#.
 
 Das Prinzip der geschriebenen Tests ist relativ simpel. Die erste Eigenschaft ist, dass die Tests sich jeweils immer nur um maximal einen "Use Case" kümmern sollen, denn so weiß man ganz genau, wo auch der Fehler entstanden ist. Einfachheitshalber wurde dann auch nur ein `Assert` bzw. ein (ein weiteres bei chronologischen Abläufen) `Setup` pro Test verwendet.
 
@@ -161,7 +161,8 @@ Der DeviceNoteService greift beispielsweise direkt auf die FileSystem Bibliothek
 Der DevicePathService hat in der Funktion get_file() Referenzen von Value Objects, wie dem DeviceSorter oder auch von dem Service DeviceNoteService, weshalb man keine eindeutige Zuordnung feststellen kann.
 Die Services selbst werden zunächst als Interface (Vertrag) definiert und später in dem Service selbst implementiert. Das Domänenmodell gibt also zunächst vor, welches Ergebnis erwartet wird.
 
-<a name="refactor"></a>
+<a name="refactoring"></a>
+
 ## Refactoring
 Zunächst wurde eine Refactoring für das Unit Testing betrieben, denn in C# kann man die Console Klasse nicht direkt testen. Man muss diese zunächst Wrappen und innerhalb der Unit Tests mocken.
 
@@ -194,7 +195,9 @@ The length of the statement
 " is 127.
 ```
 Das lässt sich auflösen indem, man den Kommentar mehrzeilig macht. Diesen Smell aufzulösen macht vorallem wegen der Übersichtlichkeit und der Lesbarkeit des Codes Sinn. Denn man will ohne weiteres Scrollen Inhalte des Codes lesen können.
-<a name="princ"></a>
+
+Abgesehen von den Code-Smell Refactorings, gab es auch noch die Refactorings zu den Entwurfsmustern, also das Einfügen von dem Interpreterpattern oder die Grundimplementation des Visitor Patterns. Außerdem wurde zusätzlich noch ein Repository eingefügt, welches ebenfalls als Refactoring gilt. Die Begründung dafür findet man in den dazugehörigen Kapiteln (Entwurfsmuster bzw. DDD).
+<a name="principle"></a>
 ## Programming Principles
 #### KISS
 Um die Software möglichst simpel zu halten, wurde auf eine größere Viewschicht verzichtet. Da es zum Teil mehrere tausend Bilder sein können, wäre auch ein Click-To-Select Feature nicht allzu sinnvoll. Somit ist eine simple Konsolenanwendung optimal.
@@ -211,7 +214,7 @@ Um Wiederholungen zu vermeiden wurde Abläufe entweder in Funktionen ausgelagert
 Durch das Single Resposibility Principle, ist jede Klasse auf eine eigene Funktion limitiert, jede weitere abhängige Funktion wird in eine zusätzliche Klasse ausgelagert (DeviceReader, Sorter, etc..). Der Sinn davon ist die Unit Tests später einfacher zu machen, also damit man nicht noch zusätzliche Refactorings diesbezüglich machen muss. Außerdem werden die Klassen dadurch kompakter, wodurch die Lesbarkeit und die Möglichkeit diese auch später zu verbessern, besser wird.
 Durch die Factory Lösung und die klare Schichtarchitektur, kann jedes einzelne Modul durch weitere Module einfach erweitert werden. Jedes einzelne Objekt innerhalb der Factory sind auch `public`.
 
-<a name="entwurf"></a>
+<a name="entwurfsmuster"></a>
 ## Entwurfsmuster
 ##### Factory
 Von Beginn an war geplant eine Factory zu verwenden. Jedoch erstmal nur experimentell, wie es in folgendem Bild zu sehen ist. Es werden ständig neue Objekte erzeugt, was logischerweise zu inkosistenzen führen kann.
